@@ -1,3 +1,10 @@
+---
+purpose: Cross-language immutability and state standards for ownership, lifecycle, value objects, and mutable-state risk
+load-when: Data ownership, mutable state, lifecycle, value objects, DTOs, shared data, or concurrency risk matters
+tier: domain
+see-also: []
+---
+
 # Immutability and State
 
 ## Principle

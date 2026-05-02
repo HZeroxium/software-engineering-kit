@@ -1,3 +1,10 @@
+---
+purpose: Cross-language concurrency and async standards for shared state, timeouts, retries, cancellation, and resource lifecycle
+load-when: Async work, concurrency, shared state, retries, cancellation, partial failure, or resource lifecycle is involved
+tier: domain
+see-also: []
+---
+
 # Concurrency and Async
 
 ## General Questions

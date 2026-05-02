@@ -1,3 +1,15 @@
+---
+purpose: TypeScript language-level coding standards for strict typing, runtime boundaries, modules, async behavior, and frontend-aware code
+load-when: Working in TypeScript code or reviewing TypeScript-specific typing, runtime validation, module, async, or frontend code-level choices
+tier: domain
+see-also:
+  - error-handling-standards.md
+  - dependency-and-library-usage.md
+  - naming-and-readability.md
+  - immutability-and-state.md
+  - concurrency-and-async.md
+---
+
 # TypeScript Coding Standards
 
 ## Core Principle

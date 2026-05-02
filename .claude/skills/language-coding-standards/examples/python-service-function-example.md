@@ -52,4 +52,4 @@ class PredictionService:
 - External dependency is behind a protocol.
 - Input validation occurs before external call.
 - Async call is awaited.
-- No retry policy is invented because retry - behavior depends on the current repo and operation idempotency.
+- No retry policy is invented because retry behavior depends on the current repo and operation idempotency.

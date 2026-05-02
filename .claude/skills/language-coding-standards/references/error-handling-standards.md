@@ -1,3 +1,10 @@
+---
+purpose: Cross-language error handling standards for categories, boundary mapping, retry classification, and safe logging
+load-when: Error handling, exception mapping, retry behavior, boundary translation, or failure output is central to the task
+tier: domain
+see-also: []
+---
+
 # Error Handling Standards
 
 ## Goals

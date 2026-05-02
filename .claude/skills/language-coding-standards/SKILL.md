@@ -1,6 +1,6 @@
 ---
 name: language-coding-standards
-description: Use when implementing, refactoring, or reviewing code style, syntax, idioms, language-level design, production-grade class/function/module structure, or maintainability in Java, Python, TypeScript, frontend, backend, DevOps, or AI application code. Prefer repository conventions and existing language/runtime version over generic rewrites.
+description: Use when implementing, refactoring, or reviewing Java, Python, or TypeScript code for language idioms, type safety, maintainability, naming/readability, error handling, async/concurrency, dependency usage, or production-grade function/class/module structure. Use for DevOps scripts, frontend code, backend code, or AI application code only when the task is code-level language standards. Do not use for pure architecture, pure debugging, pure testing, hooks/MCP, broad repo policy, or framework invention.
 ---
 
 # Language Coding Standards
@@ -10,9 +10,11 @@ description: Use when implementing, refactoring, or reviewing code style, syntax
 Guide implementation and review for idiomatic, maintainable, type-safe, testable, production-grade code.
 
 Primary focus: Java backend.  
-Also supports: Python, TypeScript, frontend-aware TypeScript, DevOps scripts, and AI application code.
+Also supports: Python and TypeScript, including frontend-aware TypeScript. DevOps scripts and AI application code are in scope only when the requested work is code-level language standards.
 
 This Skill is instruction-only. It does not enforce style, run hooks, configure MCP, create agents, or define repo-specific commands.
+
+The frontmatter description is intentionally scoped to code-level standards to avoid false activation for architecture, debugging, testing, hooks, MCP, or repo-policy tasks.
 
 ## When to use
 
@@ -32,7 +34,9 @@ Do not use this Skill for:
 
 - Pure architecture review unless code-level implementation standards are the focus.
 - Pure debugging unless implementation style contributes to the bug.
+- Pure testing or validation design unless code-level testability is the focus.
 - Pure documentation without code implications.
+- Hooks, MCP, agents, command guards, permissions, or broad repo policy.
 - Adding new libraries without user approval.
 - Inventing framework-specific conventions.
 
@@ -67,7 +71,15 @@ Useful inputs include:
 9. Include validation plan: compile/typecheck/tests/lint/static analysis as applicable.
 10. Do not invent APIs, commands, versions, or framework behavior.
 
-## Output format
+## Expected Outputs
+
+Output type: `mixed` - select the component that matches the task:
+
+- Implementation guidance: `recommendation` with confirmed facts, assumptions, recommended approach, minimal code or fix plan, edge cases, validation, and risks.
+- Language-specific review: `report` with findings, evidence, impact, minimal fixes, and validation.
+- Coding-standard fix plan: `plan` with ordered minimal changes, compatibility notes, tests, validation commands, and residual risk.
+
+The headings below are semantic defaults, not a required fixed schema. Adapt them to the task while preserving the declared output type.
 
 Default output:
 
@@ -101,14 +113,22 @@ For code review:
 # Validation
 ```
 
+## Rule coordination
+
+This Skill adds code-level language guidance on top of global rules. Do not duplicate or override:
+
+- `.claude/rules/00-personal-preferences.md` for answer style and general code-work preferences.
+- `.claude/rules/10-safety-and-permissions.md` for approval boundaries, secrets, untrusted content, and high-risk actions.
+- `.claude/rules/40-harness-engineering-and-validation.md` for validation command discovery and evidence discipline.
+- `.claude/rules/50-output-standards.md` for standard engineering and code-review output.
+
 ## Safety boundaries
 
-- Do not invent APIs, commands, framework behavior, file paths, or dependency versions.
+- Do not use language features unavailable in the discovered runtime version.
 - Do not introduce new libraries without justification and user approval.
 - Do not rewrite broadly unless explicitly requested.
 - Preserve public API, schema, behavior, and compatibility unless change is requested.
-- Do not expose secrets, credentials, customer data, sensitive logs, or proprietary data.
-- Require explicit confirmation before high-risk changes involving migrations, auth/security, CI/CD, production configs, dependency upgrades, destructive operations, infrastructure, or broad rewrites.
+- When changing logging, errors, or examples, avoid sensitive details and follow global safety rules.
 
 ## Validation
 
@@ -121,7 +141,7 @@ Recommend validation through:
 - Logs/metrics/traces when runtime behavior changes.
 - Manual review for security-sensitive changes.
 
-- Do not invent commands. Discover commands from the current repository.
+Discover commands from the current repository and mark any assumed commands explicitly.
 
 ## Failure handling
 
@@ -135,22 +155,25 @@ If repository conventions are unclear:
 
 ## Supporting files
 
-Load only when useful:
+Load only what the task needs. Start with `references/reference-index.md` when multiple supporting files may apply or when the load order is unclear.
 
-- references/java-coding-standards.md
-- references/python-coding-standards.md
-- references/typescript-coding-standards.md
-- references/error-handling-standards.md
-- references/dependency-and-library-usage.md
-- references/naming-and-readability.md
-- references/immutability-and-state.md
-- references/concurrency-and-async.md
-- templates/implementation-guidance.md
-- templates/language-specific-review.md
-- templates/coding-standard-fix-plan.md
-- examples/java-service-method-example.md
-- examples/python-service-function-example.md
-- examples/typescript-module-example.md
-- checklists/java-implementation-checklist.md
-- checklists/python-implementation-checklist.md
-- checklists/typescript-implementation-checklist.md
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `references/reference-index.md` | Semantic navigation graph for references, checklists, templates, and examples | Starting a broad language-standards task, or when unsure which supporting file to load |
+| `references/java-coding-standards.md` | Java implementation and review standards | Working in Java code or reviewing Java-specific choices |
+| `references/python-coding-standards.md` | Python implementation and review standards | Working in Python code or reviewing Python-specific choices |
+| `references/typescript-coding-standards.md` | TypeScript and frontend-aware TypeScript standards | Working in TypeScript code or reviewing TypeScript/frontend code-level choices |
+| `references/error-handling-standards.md` | Error taxonomy, boundary mapping, retry classification, and safe logging | Error handling, exception mapping, retry behavior, or failure output is central |
+| `references/dependency-and-library-usage.md` | Dependency approval and library selection discipline | Adding, replacing, upgrading, or justifying dependencies |
+| `references/naming-and-readability.md` | Naming, method/function shape, comments, and readability checks | Improving clarity, names, comments, or local structure |
+| `references/immutability-and-state.md` | Immutability, ownership, lifecycle, and mutable-state risk | Data ownership, state mutation, value objects, DTOs, or concurrency risk matters |
+| `references/concurrency-and-async.md` | Java/Python/TypeScript concurrency, async, timeout, retry, and resource rules | Async work, shared state, retries, cancellation, resource lifecycle, or partial failure is involved |
+| `templates/implementation-guidance.md` | Structured implementation guidance output | Producing implementation guidance |
+| `templates/language-specific-review.md` | Structured language-specific review output | Producing a code-level review report |
+| `templates/coding-standard-fix-plan.md` | Structured fix plan output | Producing a minimal coding-standard fix plan |
+| `examples/java-service-method-example.md` | Illustrative Java service method example | Calibrating Java guidance or examples |
+| `examples/python-service-function-example.md` | Illustrative Python service function example | Calibrating Python guidance or examples |
+| `examples/typescript-module-example.md` | Illustrative TypeScript module example | Calibrating TypeScript guidance or examples |
+| `checklists/java-implementation-checklist.md` | Java implementation checklist | Reviewing Java implementation completeness |
+| `checklists/python-implementation-checklist.md` | Python implementation checklist | Reviewing Python implementation completeness |
+| `checklists/typescript-implementation-checklist.md` | TypeScript implementation checklist | Reviewing TypeScript implementation completeness |

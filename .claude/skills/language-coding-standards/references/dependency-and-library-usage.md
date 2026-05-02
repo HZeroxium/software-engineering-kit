@@ -1,3 +1,10 @@
+---
+purpose: Cross-language dependency and library usage standards for approval, selection, version discipline, and security review
+load-when: Adding, replacing, upgrading, or justifying a dependency or library choice
+tier: domain
+see-also: []
+---
+
 # Dependency and Library Usage
 
 ## Default Rule

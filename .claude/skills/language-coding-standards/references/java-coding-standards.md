@@ -1,3 +1,15 @@
+---
+purpose: Java language-level coding standards for type-safe, maintainable, production-grade implementation and review
+load-when: Working in Java code or reviewing Java-specific language, structure, runtime, or maintainability choices
+tier: domain
+see-also:
+  - error-handling-standards.md
+  - dependency-and-library-usage.md
+  - naming-and-readability.md
+  - immutability-and-state.md
+  - concurrency-and-async.md
+---
+
 # Java Coding Standards
 
 ## Core Principle

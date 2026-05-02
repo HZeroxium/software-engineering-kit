@@ -1,3 +1,10 @@
+---
+purpose: Cross-language naming and readability standards for names, function shape, comments, and local clarity
+load-when: Improving or reviewing naming, readability, comments, method/function shape, or local structure
+tier: domain
+see-also: []
+---
+
 # Naming and Readability
 
 ## Naming

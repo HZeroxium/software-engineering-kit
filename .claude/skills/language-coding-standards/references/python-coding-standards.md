@@ -1,3 +1,15 @@
+---
+purpose: Python language-level coding standards for typed, testable, explicit, production-grade implementation and review
+load-when: Working in Python code or reviewing Python-specific typing, data model, async, dependency, or maintainability choices
+tier: domain
+see-also:
+  - error-handling-standards.md
+  - dependency-and-library-usage.md
+  - naming-and-readability.md
+  - immutability-and-state.md
+  - concurrency-and-async.md
+---
+
 # Python Coding Standards
 
 ## Core Principle
