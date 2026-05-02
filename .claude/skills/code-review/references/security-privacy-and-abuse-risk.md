@@ -1,3 +1,10 @@
+---
+purpose: Security, privacy, abuse risk, and reliability review checks
+load-when: Reviewing auth, permissions, input/output safety, secrets, privacy, abuse, or reliability-sensitive changes
+tier: domain
+see-also: []
+---
+
 # Security, Privacy, Abuse Risk, and Reliability Review
 
 ## Authentication and Authorization

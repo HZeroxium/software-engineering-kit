@@ -1,3 +1,8 @@
+---
+purpose: Checklist for reviewing AI-generated or generated code risks
+load-when: Reviewing generated code, AI-created patches, or suspiciously plausible code
+---
+
 # AI-Generated Code Review Checklist
 
 AI-generated code needs stricter review because it may look plausible while hiding incorrect assumptions.

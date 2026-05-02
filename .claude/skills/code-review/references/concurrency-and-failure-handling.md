@@ -1,3 +1,10 @@
+---
+purpose: Concurrency, retry, timeout, partial failure, and resource lifecycle review checks
+load-when: Reviewing async work, distributed flows, retries, transactions, resource handling, or failure modes
+tier: domain
+see-also: []
+---
+
 # Concurrency and Failure Handling Review
 
 ## Concurrency

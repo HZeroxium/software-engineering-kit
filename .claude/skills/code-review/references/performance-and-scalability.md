@@ -1,3 +1,10 @@
+---
+purpose: Performance, scalability, data access, CPU/memory, I/O, and network review checks
+load-when: Reviewing hot paths, queries, limits, batching, resource usage, or expected load
+tier: domain
+see-also: []
+---
+
 # Performance and Scalability Review
 
 ## Data Access

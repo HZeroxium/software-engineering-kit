@@ -1,3 +1,10 @@
+---
+purpose: Correctness, domain rule, state, contract, and data consistency review checks
+load-when: Reviewing behavior, business logic, API contracts, state transitions, or data writes
+tier: domain
+see-also: []
+---
+
 # Functional Correctness and Business Logic Review
 
 ## Core Questions

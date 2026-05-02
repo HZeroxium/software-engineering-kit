@@ -1,3 +1,10 @@
+---
+purpose: Maintainability, architecture, tests, and observability review checks
+load-when: Reviewing structure, boundaries, test coverage, diagnostics, logs, metrics, or traces
+tier: domain
+see-also: []
+---
+
 # Maintainability, Architecture, Tests, and Observability Review
 
 ## Maintainability

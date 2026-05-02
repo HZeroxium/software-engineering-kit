@@ -1,3 +1,8 @@
+---
+purpose: Minimal fix plan template for an identified code review finding
+load-when: User asks for a fix plan after findings are identified
+---
+
 # Minimal Fix Plan
 
 ## Finding Addressed

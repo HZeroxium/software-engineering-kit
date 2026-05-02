@@ -74,7 +74,9 @@ Useful inputs include:
 6. Avoid broad rewrites unless explicitly requested.
 7. Summarize remaining risks and validation gaps.
 
-## Output format
+## Expected Outputs
+
+Output type: `report` - severity-ordered findings with evidence, impact, minimal fix, validation, and remaining risk.
 
 Default output:
 
@@ -99,6 +101,14 @@ Default output:
 ```
 
 If there are no findings in a severity category, say so briefly.
+
+## Rule coordination
+
+This Skill provides task-specific review procedure and supporting references. Global code-review preferences, output standards, and safety boundaries still apply from:
+
+- `.claude/rules/00-personal-preferences.md`
+- `.claude/rules/10-safety-and-permissions.md`
+- `.claude/rules/50-output-standards.md`
 
 ## Safety boundaries
 
@@ -139,19 +149,28 @@ If a review reveals high-risk changes:
 - Explain the risk.
 - Ask for explicit approval before edits or command execution.
 
+## Routing
+
+- Use this Skill for general cross-stack code, diff, PR, plan, and AI patch review.
+- For backend-heavy PRs or designs that span multiple backend scopes, consider loading or handing off to `backend-review-orchestrator`.
+- Do not use this Skill as the main implementation workflow.
+
 ## Supporting files
 
 Load only when useful:
 
-- templates/severity-review-report.md
-- templates/diff-review-summary.md
-- templates/minimal-fix-plan.md
-- references/review-priority-model.md
-- references/functional-correctness-and-business-logic.md
-- references/security-privacy-and-abuse-risk.md
-- references/concurrency-and-failure-handling.md
-- references/performance-and-scalability.md
-- references/maintainability-architecture-tests-observability.md
-- checklists/pr-review-checklist.md
-- checklists/ai-generated-code-review-checklist.md
-- examples/severity-based-review-example.md
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `references/reference-index.md` | Semantic navigation graph for references, checklists, templates, and example files | Starting a review that may need multiple supporting files, or when unsure which reference to load first |
+| `references/review-priority-model.md` | Severity model and review priority order | Starting any non-trivial code review |
+| `references/functional-correctness-and-business-logic.md` | Correctness, domain rule, state, contract, and data consistency checks | Reviewing behavior, business logic, API contracts, state transitions, or data writes |
+| `references/security-privacy-and-abuse-risk.md` | Security, privacy, abuse, and reliability checks | Reviewing auth, permissions, input/output safety, secrets, privacy, abuse, or reliability-sensitive changes |
+| `references/concurrency-and-failure-handling.md` | Concurrency, retries, timeouts, partial failure, and resource lifecycle checks | Reviewing async work, distributed flows, retries, transactions, resource handling, or failure modes |
+| `references/performance-and-scalability.md` | Performance, scalability, data access, CPU/memory, I/O, and network checks | Reviewing hot paths, queries, limits, batching, resource usage, or expected load |
+| `references/maintainability-architecture-tests-observability.md` | Maintainability, architecture, tests, and observability checks | Reviewing structure, boundaries, test coverage, diagnostics, logs, metrics, or traces |
+| `checklists/pr-review-checklist.md` | Checklist for full PR or diff review | Reviewing a complete PR, broad diff, or merge readiness |
+| `checklists/ai-generated-code-review-checklist.md` | Checklist for AI-generated or generated code risks | Reviewing generated code, AI-created patches, or suspiciously plausible code |
+| `templates/severity-review-report.md` | Full severity-based review report template | Producing a complete review report |
+| `templates/diff-review-summary.md` | Condensed diff review summary template | Producing a compact summary of a diff or PR |
+| `templates/minimal-fix-plan.md` | Minimal fix plan template for a finding | User asks for a fix plan after findings are identified |
+| `examples/severity-based-review-example.md` | Example severity-based review output | Calibrating output depth or severity wording |

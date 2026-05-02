@@ -1,3 +1,8 @@
+---
+purpose: Full severity-based code review report template
+load-when: Producing a complete review report
+---
+
 # Severity Review Report
 
 ## Review Summary

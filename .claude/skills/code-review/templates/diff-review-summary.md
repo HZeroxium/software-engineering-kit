@@ -1,3 +1,8 @@
+---
+purpose: Condensed diff or pull request review summary template
+load-when: Producing a compact summary of a diff or pull request
+---
+
 # Diff Review Summary
 
 ## Scope Reviewed

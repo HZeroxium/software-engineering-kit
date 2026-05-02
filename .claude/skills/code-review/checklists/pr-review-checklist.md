@@ -1,3 +1,8 @@
+---
+purpose: Checklist for complete PR, diff, or merge-readiness review
+load-when: Reviewing a complete PR, broad diff, or merge readiness
+---
+
 # PR Review Checklist
 
 ## Context

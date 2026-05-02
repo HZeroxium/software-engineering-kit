@@ -1,3 +1,15 @@
+---
+purpose: Severity model and priority order for production-grade code review findings
+load-when: Starting any non-trivial code review
+tier: foundational
+see-also:
+  - functional-correctness-and-business-logic.md
+  - security-privacy-and-abuse-risk.md
+  - concurrency-and-failure-handling.md
+  - performance-and-scalability.md
+  - maintainability-architecture-tests-observability.md
+---
+
 # Review Priority Model
 
 Review in this priority order.

@@ -1,3 +1,8 @@
+---
+purpose: Example output for severity-based code review findings
+load-when: Calibrating output depth or severity wording for a code review
+---
+
 # Example: Severity-Based Review
 
 ## Review Summary
