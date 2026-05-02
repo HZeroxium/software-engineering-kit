@@ -1,3 +1,8 @@
+---
+purpose: End-to-end debugging completeness check
+load-when: Before summarizing debugging work, when the task is broad, or when audit completeness matters
+---
+
 # Debugging Checklist
 
 ## Problem Definition

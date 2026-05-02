@@ -1,3 +1,8 @@
+---
+purpose: Reproducibility capture template
+load-when: Documenting how to reproduce a failure
+---
+
 # Reproduction Steps
 
 ## Environment

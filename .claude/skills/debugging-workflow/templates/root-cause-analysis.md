@@ -1,3 +1,8 @@
+---
+purpose: Incident or failure root-cause analysis template
+load-when: Producing an RCA for a confirmed incident or failure
+---
+
 # Root Cause Analysis
 
 ## Incident / Failure Summary

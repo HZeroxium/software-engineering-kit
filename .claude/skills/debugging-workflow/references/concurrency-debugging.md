@@ -1,3 +1,10 @@
+---
+purpose: Race condition, deadlock, duplicate write, lost update, and order-dependent failure analysis
+load-when: Debugging flaky behavior, races, deadlocks, duplicate records, inconsistent state, or order-dependent failures
+tier: scenario
+see-also: []
+---
+
 # Concurrency Debugging
 
 ## Symptoms

@@ -1,3 +1,10 @@
+---
+purpose: Logs, metrics, traces, correlation, and observability gap analysis
+load-when: Debugging runtime symptoms, production symptoms, operational signals, or observability data
+tier: domain
+see-also: []
+---
+
 # Logs, Metrics, and Traces Debugging
 
 ## Logs

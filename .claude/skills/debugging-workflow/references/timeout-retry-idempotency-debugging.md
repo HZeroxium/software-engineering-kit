@@ -1,3 +1,10 @@
+---
+purpose: Timeout, retry, retry storm, duplicate side effect, and idempotency analysis
+load-when: Debugging hangs, timeouts, retries, duplicate side effects, retry storms, or idempotency gaps
+tier: scenario
+see-also: []
+---
+
 # Timeout, Retry, and Idempotency Debugging
 
 ## Timeout Symptoms

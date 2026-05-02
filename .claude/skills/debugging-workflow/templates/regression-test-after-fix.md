@@ -1,3 +1,8 @@
+---
+purpose: Regression test plan template after a confirmed fix direction
+load-when: Describing the test that should fail before the fix and pass after it
+---
+
 # Regression Test After Fix
 
 ## Bug Summary

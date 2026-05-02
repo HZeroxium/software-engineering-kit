@@ -1,3 +1,8 @@
+---
+purpose: Full debugging analysis report template
+load-when: Producing a complete diagnostic report
+---
+
 # Debug Report
 
 ## Expected vs Actual

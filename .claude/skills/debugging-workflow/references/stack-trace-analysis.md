@@ -1,3 +1,10 @@
+---
+purpose: Exception and stack trace analysis patterns
+load-when: Debugging exceptions, caused-by chains, application frames, or line-number failures
+tier: domain
+see-also: []
+---
+
 # Stack Trace Analysis
 
 ## Reading Strategy

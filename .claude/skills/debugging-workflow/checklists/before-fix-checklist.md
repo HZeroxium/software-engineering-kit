@@ -1,3 +1,8 @@
+---
+purpose: Pre-edit root-cause, scope, safety, and validation gate for bug fixes
+load-when: Before editing code for a bug fix
+---
+
 # Before Fix Checklist
 
 Use before editing code for a bug fix.

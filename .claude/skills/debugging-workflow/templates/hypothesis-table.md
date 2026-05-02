@@ -1,3 +1,8 @@
+---
+purpose: Ranked hypothesis table template
+load-when: Comparing plausible causes or planning experiments
+---
+
 # Hypothesis Table
 
 | Rank | Hypothesis | Evidence For | Evidence Against | Risk if True | Confidence      | Next Experiment |

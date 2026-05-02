@@ -1,3 +1,10 @@
+---
+purpose: CI job, build, test, cache, dependency, and environment failure analysis
+load-when: Debugging CI job failures, pipeline failures, build failures, or failing CI commands
+tier: domain
+see-also: []
+---
+
 # CI Failure Debugging
 
 ## First Questions

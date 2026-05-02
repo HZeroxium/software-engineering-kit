@@ -1,3 +1,15 @@
+---
+purpose: Core evidence, hypothesis, experiment, root-cause, minimal-fix, regression-test, and validation workflow
+load-when: Starting any non-trivial debugging task
+tier: foundational
+see-also:
+  - stack-trace-analysis.md
+  - logs-metrics-traces-debugging.md
+  - ci-failure-debugging.md
+  - concurrency-debugging.md
+  - timeout-retry-idempotency-debugging.md
+---
+
 # Evidence-Based Debugging
 
 ## Principle
