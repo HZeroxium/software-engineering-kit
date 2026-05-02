@@ -1,3 +1,8 @@
+---
+purpose: Quality bar checklist for reviewing requirements before implementation planning
+load-when: Reviewing or finalizing a set of requirements
+---
+
 # Requirement Quality Checklist
 
 Use this checklist to review requirements before implementation planning.

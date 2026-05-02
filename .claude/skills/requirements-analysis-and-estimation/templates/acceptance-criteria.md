@@ -1,3 +1,8 @@
+---
+purpose: Given/When/Then and rule-based acceptance criteria template covering happy path, permissions, errors, observability, and idempotency
+load-when: Defining or reviewing acceptance criteria
+---
+
 # Acceptance Criteria Template
 
 ## Feature

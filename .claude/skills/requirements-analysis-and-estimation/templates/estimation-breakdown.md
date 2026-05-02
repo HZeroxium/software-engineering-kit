@@ -1,3 +1,8 @@
+---
+purpose: Work breakdown template with confidence summary, uncertainty per area, and risk drivers
+load-when: Estimation mode or producing an effort breakdown
+---
+
 # Estimation Breakdown
 
 ## Estimate Summary

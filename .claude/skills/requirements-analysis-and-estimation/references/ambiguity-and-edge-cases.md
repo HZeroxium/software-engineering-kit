@@ -1,3 +1,11 @@
+---
+purpose: Common ambiguity patterns and edge case categories for requirements analysis
+load-when: Decomposing vague requirements or identifying missing edge cases
+tier: domain
+see-also:
+  - checklists/requirement-quality-checklist.md
+---
+
 # Ambiguity and Edge Cases
 
 ## Common Ambiguity Patterns

@@ -1,3 +1,8 @@
+---
+purpose: Full feature specification template — summary, requirements, acceptance criteria, data/API impact, scope, and test ideas
+load-when: Producing a complete structured feature document
+---
+
 # Feature Brief
 
 ## 1. Feature Summary
