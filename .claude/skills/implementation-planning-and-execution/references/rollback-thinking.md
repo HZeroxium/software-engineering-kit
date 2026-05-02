@@ -1,3 +1,11 @@
+---
+purpose: Rollback analysis for code, data, config, and deployment changes — proportional to risk level
+load-when: Implementation involves migrations, data changes, schema changes, config changes, or deployment-sensitive code
+tier: scenario
+see-also:
+  - exit-criteria.md
+---
+
 # Rollback Thinking
 
 ## Goal

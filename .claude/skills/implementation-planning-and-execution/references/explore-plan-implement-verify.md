@@ -1,8 +1,27 @@
+---
+purpose: Step-by-step workflow for explore, plan, implement, verify, summarize with implementation-specific guidance
+load-when: Starting any implementation task or when the workflow steps need clarification
+tier: foundational
+see-also:
+  - exit-criteria.md
+  - rollback-thinking.md
+---
+
 # Explore → Plan → Implement → Verify
 
 ## 1. Explore Read-Only
 
 Goal: understand before changing.
+
+### Task Risk Tier
+
+Before starting, classify the task:
+
+| Tier   | Characteristics                                                         | Action                          |
+| ------ | ----------------------------------------------------------------------- | ------------------------------- |
+| Low    | Single file, no public API change, no data mutation                     | Proceed directly                |
+| Medium | Multi-file, test coverage needed, config change possible                | Summarize findings first        |
+| High   | Migration, auth/security, CI/CD, production config, or broad rewrite   | Require explicit approval       |
 
 Inspect:
 

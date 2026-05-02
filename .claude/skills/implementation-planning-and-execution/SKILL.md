@@ -66,9 +66,17 @@ Useful inputs include:
 6. Verify with the narrowest useful checks first, then broader checks when appropriate.
 7. Summarize diff, tests run, tests not run, residual risks, and next steps.
 
-## Output format
+## Expected Outputs
 
-Default output:
+Output type: **mixed** — this Skill produces multiple output types across phases:
+
+- **plan** — exploration, confirmed facts, affected files, implementation steps, risks, verification commands, exit criteria.
+- **checklist** — validation gate results (tests run / not run).
+- **summary** — post-implementation wrap-up (what changed, residual risks, next steps).
+
+For simple tasks, compress all phases into a single concise response while preserving validation and risk reporting.
+
+Default output format:
 
 ```markdown
 # Exploration Summary
@@ -117,6 +125,30 @@ For simple tasks, compress the format while preserving validation and risk repor
 - If tests fail, inspect failure, classify cause, apply minimal fix, and rerun relevant checks.
 - Stop and escalate if failure cause is unclear or risk is high.
 
+## Failure handling
+
+If context is insufficient to begin:
+
+- State what is missing.
+- State what assumptions would be needed to proceed.
+- Ask the minimum clarifying questions to unblock planning.
+- Prefer a safe read-only exploration step over guessing.
+
+If implementation reveals unexpected high-risk scope:
+
+- Stop before proceeding.
+- Explain the newly discovered risk.
+- Propose a revised, narrower plan.
+- Require explicit user approval before continuing.
+
+If validation fails:
+
+- Inspect failure before applying any fix.
+- Classify cause: test issue, code issue, or environment issue.
+- Apply minimal fix only if cause is clear.
+- Rerun targeted check.
+- Escalate if cause is unclear or risk is high after one fix attempt.
+
 ## Supporting files
 
 Load only when useful:
@@ -125,6 +157,7 @@ Load only when useful:
 - templates/task-breakdown.md for splitting work.
 - templates/risk-and-validation-plan.md for risk-heavy changes.
 - templates/final-implementation-summary.md for final response.
+- references/reference-index.md for reference navigation map.
 - references/explore-plan-implement-verify.md for workflow details.
 - references/exit-criteria.md for readiness criteria.
 - references/rollback-thinking.md for rollback analysis.

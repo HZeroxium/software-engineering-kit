@@ -51,67 +51,37 @@ Out of scope:
 
 Discovered from repo:
 
-````text
+```text
 # Fill only with commands discovered from current repo evidence.
+```
 
 Assumed, not yet verified:
 
+```text
 # Fill only if commands cannot be discovered and assumptions are needed.
-Risks
-Correctness:
-Security:
-Data consistency:
-Concurrency:
-Performance:
-Observability:
-Maintainability:
-Compatibility:
-Rollback Notes
-Code rollback:
-Data rollback:
-Config rollback:
-Feature flag / disable path:
-Approval Needed?
-Yes/No:
-Reason:
+```
 
-`~/.claude/skills/implementation-planning-and-execution/templates/task-breakdown.md`
+## Risks
 
-```markdown
-# Task Breakdown
+| Risk Area        | Level           | Notes |
+| ---------------- | --------------- | ----- |
+| Correctness      | Low/Medium/High |       |
+| Security         | Low/Medium/High |       |
+| Data consistency | Low/Medium/High |       |
+| Concurrency      | Low/Medium/High |       |
+| Performance      | Low/Medium/High |       |
+| Observability    | Low/Medium/High |       |
+| Maintainability  | Low/Medium/High |       |
+| Compatibility    | Low/Medium/High |       |
 
-## Parent Task
+## Rollback Notes
 
-Describe the implementation goal.
+- Code rollback:
+- Data rollback:
+- Config rollback:
+- Feature flag / disable path:
 
-## Work Items
+## Approval Needed?
 
-| ID | Task | Type | Owner | Dependencies | Risk | Estimate |
-|---|---|---|---|---|---|---:|
-| T1 |  | Code/Test/Docs/Config |  |  | Low/Medium/High |  |
-| T2 |  | Code/Test/Docs/Config |  |  | Low/Medium/High |  |
-| T3 |  | Code/Test/Docs/Config |  |  | Low/Medium/High |  |
-
-## Suggested Order
-
-1.
-2.
-3.
-
-## Parallelizable Work
-
--
-
-## Blocking Dependencies
-
--
-
-## Review Strategy
-
-- Review as one PR because:
-- Split into multiple PRs because:
-
-## Done Criteria
-
--
-````
+- Yes/No:
+- Reason:

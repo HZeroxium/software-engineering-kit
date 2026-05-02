@@ -1,3 +1,11 @@
+---
+purpose: Readiness criteria for implementation tasks — functional, quality, validation, documentation, observability, and security gates
+load-when: Deciding whether a completed implementation is ready for final summary or needs further validation
+tier: domain
+see-also:
+  - explore-plan-implement-verify.md
+---
+
 # Exit Criteria
 
 A task is ready for final summary when the following are true or explicitly documented as not possible.
@@ -59,6 +67,15 @@ Manual review required for:
 - Production configs.
 - Public API/schema changes.
 - Destructive operations.
+
+### Smart Escalation Heuristics
+
+Escalate immediately (do not attempt a fix) when:
+
+- Failure cause is unclear after one fix attempt.
+- The fix requires modifying unrelated modules.
+- A migration or data change is discovered mid-implementation.
+- A security-sensitive invariant may be violated.
 
 ## Final Reporting
 
