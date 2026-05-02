@@ -61,6 +61,7 @@ Do not use this agent when:
 - The task requires running destructive commands.
 - The task requires production access.
 - There is no code, config, diff, or context to inspect.
+- The task is general code review with no security relevance — use `code-reviewer` instead.
 
 ## Allowed actions
 
@@ -150,6 +151,8 @@ If context is missing, state what cannot be confirmed and continue with explicit
 8. Escalate high-risk issues to the main conversation.
 
 ## Output format
+
+Output type: `report` — security severity findings with exploit scenarios, affected boundaries, and minimal mitigations.
 
 Return this structure:
 
@@ -271,3 +274,9 @@ Recommend validation through:
 - Logs/metrics review for safe observability.
 
 Do not invent commands. Tell the main conversation to discover validation commands from the current repository or approved security tooling.
+
+## Maintenance
+
+- Smoke test: Invoke with a code snippet containing a hardcoded credential. Confirm the agent returns a Critical finding with an exploit scenario and minimal mitigation.
+- Failure signs: Agent misses obvious secrets or injection patterns; agent attempts to edit files; agent exposes sensitive values in the report.
+- Deprecation condition: If a unified review agent replaces the code/security/test reviewer split.

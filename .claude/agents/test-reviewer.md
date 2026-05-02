@@ -51,6 +51,7 @@ Do not use this agent when:
 - The task is deep debugging unrelated to test design.
 - Running commands or modifying files is required.
 - The repository context is too limited to assess test quality meaningfully.
+- The task is general code review not focused on test design or test quality — use `code-reviewer` instead.
 
 ## Allowed actions
 
@@ -134,6 +135,8 @@ If context is missing, state what cannot be confirmed and recommend the smallest
 10. Return a structured report.
 
 ## Output format
+
+Output type: `report` — test quality findings with missing scenario recommendations and validation strategy.
 
 Return this structure:
 
@@ -241,3 +244,9 @@ Recommend validation through:
 - Manual review for high-risk areas.
 
 Do not invent commands. If commands are needed, instruct the main conversation to discover them from the repository.
+
+## Maintenance
+
+- Smoke test: Invoke with a test file that has no assertions. Confirm the agent returns a Blocking finding for missing or weak assertions.
+- Failure signs: Agent approves tests with no assertions; agent attempts to write or edit test files; agent invents test framework behavior.
+- Deprecation condition: If a unified review agent replaces the code/security/test reviewer split.

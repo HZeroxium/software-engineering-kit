@@ -43,6 +43,8 @@ Do not use this agent when:
 - The task is purely documentation.
 - The task requires running commands, modifying dependencies, changing CI/CD, running migrations, or editing files.
 - There is not enough code, diff, or context to review meaningfully. In that case, report the missing context.
+- The change is primarily security-sensitive (authentication, authorization, secrets, data exposure, or permissions) — use `security-reviewer` instead or in addition.
+- The task is specifically reviewing test design or test quality — use `test-reviewer` instead.
 
 ## Allowed actions
 
@@ -122,6 +124,8 @@ If context is missing, continue only with explicit assumptions and state what ca
 7. Summarize remaining risks and missing context.
 
 ## Output format
+
+Output type: `report` — severity-ranked code review findings with evidence and minimal fix recommendations.
 
 Return this structure:
 
@@ -235,3 +239,9 @@ Recommend validation through:
 - Logs, metrics, traces, or manual review where applicable.
 
 Do not invent commands. If validation commands are needed, tell the main conversation to discover them from the current repository.
+
+## Maintenance
+
+- Smoke test: Invoke with a small diff containing one obvious bug. Confirm the agent returns a Blocking finding with evidence and a minimal fix recommendation.
+- Failure signs: Agent returns no findings for clearly problematic code; agent attempts to edit files; agent does not separate evidence from assumptions.
+- Deprecation condition: If a unified review agent replaces the code/security/test reviewer split.
