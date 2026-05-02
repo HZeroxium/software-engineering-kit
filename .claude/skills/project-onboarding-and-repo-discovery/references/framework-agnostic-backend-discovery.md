@@ -1,3 +1,12 @@
+---
+purpose: Backend-specific discovery areas — API surface, runtime bootstrap, domain/application logic, data layer, integration layer, observability, and backend safety risks
+load-when: Repository signals indicate a backend service (HTTP routes, RPC, workers, schedulers, DB access, or messaging consumers)
+tier: scenario
+see-also:
+  - architecture-signal-discovery.md
+  - internal-library-analysis.md
+---
+
 # Framework-Agnostic Backend Discovery
 
 ## Principle

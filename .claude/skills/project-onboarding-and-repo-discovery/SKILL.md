@@ -7,6 +7,11 @@ description: Read-only workflow for onboarding unfamiliar repositories. Discover
 
 Use this Skill when entering a new or unfamiliar repository, before implementing changes in unclear codebases, or when the user asks to understand, map, onboard, or prepare context for a project.
 
+## Required Inputs
+
+- A repository path or working directory with read access.
+- No credentials, tokens, or external services required — discovery is local and read-only by default.
+
 ## Default Mode
 
 Start read-only.
@@ -23,7 +28,7 @@ If the user wants persistent documentation, propose `docs/ai/repo-map.md` conten
 4. Produce a compact onboarding report and AI-ready context block that can be reused in future prompts.
 5. Separate confirmed facts, assumptions, unknowns, and recommended next inspections.
 
-## Non-Goals
+## When not to use
 
 Do not:
 
@@ -35,111 +40,24 @@ Do not:
 
 ## Workflow
 
-### 1. Establish Repository Boundary
+Run the 8-phase discovery sequence (full detail in `references/repository-discovery-workflow.md`):
 
-Identify:
+1. **Boundary and inventory** — repo root, language indicators, build/package files, CI/CD, docs, source, test, config, and generated-code directories.
+2. **Source-of-truth files** — build files, lockfiles, CI/CD validation, runtime entrypoints, config loading, tests, docs.
+3. **Entrypoints and runtime model** — main classes/functions, server bootstrap, CLI, workers, schedulers, batch jobs, frontend roots.
+4. **Module boundaries** — independent modules, shared libs, adapters, domain layer, API layer, generated sources.
+5. **Internal abstractions** — namespaces, custom annotations, base classes, factories, DI modules, config readers, RPC wrappers, test harnesses.
+6. **Validation command discovery** — confirm from README, build files, CI, scripts. Classify as confirmed / candidate / unsafe without approval / unknown.
+7. **Risk review** — auth/security, secrets, migrations, production config, CI/CD, infrastructure, generated code, data mutation, external writes.
+8. **Report** — produce outputs using templates in `templates/`. See `references/repository-discovery-workflow.md` for phase detail.
 
-- Current working directory and likely repository root.
-- Git metadata if visible.
-- Top-level files and directories.
-- Language indicators.
-- Build/package manager files.
-- Documentation files.
-- CI/CD and deployment files.
-- Config directories.
-- Generated-code directories.
-- Test directories.
-
-Prefer safe listing and search operations.
-
-### 2. Read High-Signal Files First
-
-Inspect, when present:
-
-- `README*`, `CONTRIBUTING*`, `docs/**`, `AGENTS.md`, `CLAUDE.md`, `CODEX.md`
-- Build files: `pom.xml`, `build.gradle`, `settings.gradle`, `Makefile`, `package.json`, `pyproject.toml`, `requirements*.txt`, `go.mod`, `Cargo.toml`
-- Runtime files: Dockerfiles, compose files, Helm charts, manifests, Procfiles, service definitions
-- CI/CD files: `.github/workflows/**`, `.gitlab-ci.yml`, `Jenkinsfile`, pipeline configs
-- Config examples: `config/**`, `conf/**`, `application.*`, `.env.example`, `*.properties`, `*.yaml`, `*.ini`
-- Test configs and test fixtures.
-
-### 3. Discover Architecture From Code Usage
-
-Use actual usage patterns:
-
-- Entrypoints and startup/bootstrap classes.
-- Module boundaries and package naming.
-- API, RPC, CLI, worker, scheduler, batch, consumer, or frontend entrypoints.
-- Internal abstractions and wrappers.
-- Dependency injection or factory patterns.
-- Configuration loading.
-- Logging, metrics, tracing, and error handling.
-- Persistence and migrations.
-- Test utilities and fixtures.
-
-Do not infer behavior from package names alone.
-
-### 4. Analyze Internal Libraries Carefully
-
-For internal libraries or custom frameworks:
-
-- Find imports/usages across production and tests.
-- Identify initialization/bootstrap patterns.
-- Identify annotations, base classes, factories, clients, server abstractions, config readers, interceptors, decorators, middleware, and test harnesses.
-- Prefer concrete examples and tests.
-- Mark unknown behavior explicitly.
-- Recommend source files to inspect next.
-
-### 5. Discover Validation Commands
-
-Infer canonical commands from repository evidence:
-
-- Build commands.
-- Test commands.
-- Lint/format/typecheck commands.
-- Code generation commands.
-- Local run commands.
-- CI commands.
-
-Do not invent commands. If uncertain, label them as candidate commands and explain the evidence.
-
-### 6. Identify Risk Areas
-
-Flag:
-
-- AuthN/AuthZ/security-sensitive code.
-- Secrets and credentials.
-- Production configs.
-- Migrations and schema changes.
-- Data deletion or mutation paths.
-- Dependency upgrades and lockfiles.
-- CI/CD and infrastructure.
-- Generated code.
-- Internal libraries with unclear behavior.
-- High-cardinality observability or logging risks.
-- External integrations and network calls.
-
-### 7. Produce Outputs
-
-Return:
-
-- Repository onboarding report.
-- Internal library inventory.
-- Build/test command discovery.
-- AI-ready context block.
-- Recommended next files to inspect.
-- Open questions.
-- Confirmed facts vs assumptions vs unknowns.
-
-Use the templates in:
-
-- `templates/repo-onboarding-report.md`
-- `templates/internal-library-inventory.md`
-- `templates/build-and-test-command-discovery.md`
-- `templates/ai-ready-context-block.md`
-- `templates/onboarding-questions.md`
-
-Use references and checklists only when needed for deeper analysis.
+**Load additional references when needed:**
+- Architecture analysis → `references/architecture-signal-discovery.md`
+- Build/command classification → `references/build-system-discovery.md`
+- Internal library depth → `references/internal-library-analysis.md`
+- Test harness → `references/test-harness-discovery.md`
+- Backend-specific signals → `references/framework-agnostic-backend-discovery.md`
+- Java-specific signals → `references/java-project-discovery.md`
 
 ## Output Rules
 
@@ -159,3 +77,16 @@ End with:
 3. “Safe next action”
 
 If the user asks to create persistent repo documentation, produce proposed `docs/ai/repo-map.md` content and ask for explicit confirmation before writing.
+
+## Expected Outputs
+
+Output type: `mixed`
+
+| Component | Type | Template |
+|-----------|------|----------|
+| Onboarding report | `report` | `templates/repo-onboarding-report.md` |
+| Internal library inventory | `analysis` | `templates/internal-library-inventory.md` |
+| Build/test command discovery | `analysis` | `templates/build-and-test-command-discovery.md` |
+| AI-ready context block | `summary` | `templates/ai-ready-context-block.md` |
+
+All components use the `Confirmed / Likely / Assumption / Unknown` classification. End every output with "Recommended next files to inspect", "Open questions", and "Safe next action".

@@ -1,3 +1,14 @@
+---
+purpose: 8-phase discovery workflow covering boundary, source-of-truth files, entrypoints, module boundaries, internal abstractions, validation commands, risk review, and report production
+load-when: Starting any onboarding session or when the full workflow sequence is needed
+tier: foundational
+see-also:
+  - architecture-signal-discovery.md
+  - build-system-discovery.md
+  - internal-library-analysis.md
+  - test-harness-discovery.md
+---
+
 # Repository Discovery Workflow
 
 ## Objective

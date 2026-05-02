@@ -1,3 +1,11 @@
+---
+purpose: Discovering build systems, package managers, codegen workflows, and validation commands from repository evidence; command classification as confirmed/candidate/unsafe/unknown
+load-when: Identifying the build system or classifying validation commands
+tier: domain
+see-also:
+  - test-harness-discovery.md
+---
+
 # Build System Discovery
 
 ## Objective

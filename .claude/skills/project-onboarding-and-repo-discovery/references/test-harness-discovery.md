@@ -1,3 +1,10 @@
+---
+purpose: Discovering test frameworks, test types, test directory layout, test commands, fixtures, and testing conventions from repository evidence
+load-when: Identifying the test harness or recommending future test strategy for new changes
+tier: domain
+see-also: []
+---
+
 # Test Harness Discovery
 
 ## Objective

@@ -1,3 +1,12 @@
+---
+purpose: Java-specific high-signal files, Maven and Gradle build signals, runtime entrypoint patterns, internal Java patterns (annotations, interceptors, DI modules), and Java risk areas
+load-when: Java source files or Java build files (pom.xml, build.gradle, gradlew) are detected in the repository
+tier: scenario
+see-also:
+  - build-system-discovery.md
+  - test-harness-discovery.md
+---
+
 # Java Project Discovery
 
 ## Objective

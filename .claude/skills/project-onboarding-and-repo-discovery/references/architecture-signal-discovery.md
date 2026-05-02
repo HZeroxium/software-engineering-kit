@@ -1,3 +1,11 @@
+---
+purpose: Evidence-based signals for inferring module structure, dependency flow, runtime model, and integration model without hallucinating framework or pattern assumptions
+load-when: Analyzing module structure, dependency direction, runtime model, or integration model
+tier: domain
+see-also:
+  - internal-library-analysis.md
+---
+
 # Architecture Signal Discovery
 
 ## Objective

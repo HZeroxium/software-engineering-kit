@@ -1,3 +1,10 @@
+---
+purpose: Method for analyzing internal libraries — namespace inventory, usage clustering, behavior inference from evidence, confidence classification, and risk escalation
+load-when: Internal or organization-specific packages, annotations, wrappers, or custom frameworks are detected
+tier: domain
+see-also: []
+---
+
 # Internal Library Analysis
 
 ## Goal
