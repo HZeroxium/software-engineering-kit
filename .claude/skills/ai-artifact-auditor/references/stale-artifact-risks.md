@@ -1,3 +1,11 @@
+---
+purpose: High-risk stale areas in AI artifacts; staleness signals (Claude ignoring artifact, wrong triggers, outdated syntax); mitigation strategies
+load-when: Artifact shows staleness signs such as Claude ignoring it, outdated syntax, incorrect triggers, or stale examples
+tier: scenario
+see-also:
+  - artifact-lifecycle.md
+---
+
 # Stale Artifact Risks
 
 ## High-Risk Stale Areas

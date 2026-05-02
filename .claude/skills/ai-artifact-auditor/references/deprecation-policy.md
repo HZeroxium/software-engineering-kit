@@ -1,3 +1,11 @@
+---
+purpose: When to deprecate vs delete an artifact; deprecation note format; validation steps after deprecation
+load-when: Making a deprecation, deletion, or retirement decision for an artifact
+tier: scenario
+see-also:
+  - artifact-lifecycle.md
+---
+
 # Deprecation Policy
 
 ## When to Deprecate

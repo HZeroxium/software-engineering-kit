@@ -61,10 +61,12 @@ Useful inputs include:
 
 ## Workflow
 
-1. Inventory artifacts and classify types.
-2. Identify scope: global, repo-level, tool-specific, Skill, Agent, rule, prompt, docs.
-3. Separate evidence from assumptions.
-4. Audit by dimensions:
+1. Identify the artifact type being audited (Skill, Agent, CLAUDE.md, rules/*.md, or mixed portfolio).
+2. Load `references/audit-dimensions.md` first (foundational — required for all audits). Then load additional supporting files whose "Load when" condition matches the detected audit scenario. Consult the Supporting files table at the end of this file. Do not load all files by default.
+3. Inventory artifacts and classify types.
+4. Identify scope: global, repo-level, tool-specific, Skill, Agent, rule, prompt, docs.
+5. Separate evidence from assumptions.
+6. Audit by dimensions:
    - Correctness.
    - Clarity.
    - Consistency.
@@ -74,13 +76,13 @@ Useful inputs include:
    - Portability.
    - Context efficiency.
    - Activation accuracy.
-5. Detect duplicates and conflicts.
-6. Rank findings:
+7. Detect duplicates and conflicts.
+8. Rank findings:
    - Critical.
    - High.
    - Medium.
    - Low.
-7. Recommend concrete fixes:
+9. Recommend concrete fixes:
    - Refactor.
    - Split.
    - Merge.
@@ -88,7 +90,7 @@ Useful inputs include:
    - Deprecate.
    - Delete.
    - Move content to supporting files.
-8. Produce validation and maintenance plan.
+10. Produce validation and maintenance plan.
 
 ## Output format
 
@@ -147,20 +149,29 @@ If artifact contents are incomplete:
 - Mark findings as evidence-based or assumption-based.
 - Recommend the smallest next artifact sample needed.
 
+## Maintenance
+
+- Owner: User-global, self-maintained.
+- Update triggers: Claude Code Skill behavior change; repeated audit failure pattern emerges; new artifact type added to Claude Code; checklist items become stale.
+- Deprecation condition: If a unified artifact lifecycle skill replaces the designer/auditor split.
+
 ## Supporting files
 
-Load only when useful:
+Identify the task type from the user's input, then load only the files whose "Load when" condition matches the current task. Do not load all files by default.
 
-- templates/audit-report.md
-- templates/conflict-analysis.md
-- templates/duplication-analysis.md
-- templates/artifact-refactor-plan.md
-- templates/maintenance-plan.md
-- references/audit-dimensions.md
-- references/stale-artifact-risks.md
-- references/conflict-resolution.md
-- references/artifact-lifecycle.md
-- references/deprecation-policy.md
-- checklists/skill-audit-checklist.md
-- checklists/agent-audit-checklist.md
-- checklists/claude-md-and-rules-audit-checklist.md
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `references/audit-dimensions.md` | 9 audit dimensions (correctness, clarity, consistency, security, maintainability, testability, portability, context efficiency, activation accuracy) | Starting any audit task — load this first, before other references |
+| `references/artifact-lifecycle.md` | 7-stage artifact lifecycle; criteria for split, merge, deprecate, and retire decisions | Assessing artifact health or maturity; deciding a lifecycle action |
+| `references/stale-artifact-risks.md` | High-risk stale areas; staleness signals; mitigation strategies | Artifact shows staleness signs: Claude ignoring it, outdated syntax, wrong triggers, or stale examples |
+| `references/conflict-resolution.md` | Priority model for resolving conflicts; resolution patterns for common conflict types | Conflicts detected between artifacts (global rule vs skill, skill vs skill, agent vs skill) |
+| `references/deprecation-policy.md` | When to deprecate vs delete; deprecation note format; post-deprecation validation | Making a deprecation, deletion, or retirement decision for an artifact |
+| `references/reference-index.md` | Graph of all references for this skill: tiers, edges, and load order | Starting a task that involves multiple references; or when unsure which references to load first |
+| `templates/audit-report.md` | Fill-in template for full audit report output | Producing a structured audit report |
+| `templates/conflict-analysis.md` | Fill-in template for conflict analysis | Task focuses on resolving conflicts between artifacts |
+| `templates/duplication-analysis.md` | Fill-in template for duplication analysis | Task focuses on deduplication or merging overlapping artifacts |
+| `templates/artifact-refactor-plan.md` | Fill-in template for split/merge/rename/deprecate plan | Recommending a structural refactor of an artifact set |
+| `templates/maintenance-plan.md` | Fill-in template for recurring maintenance cadence | Task produces a maintenance or audit schedule |
+| `checklists/skill-audit-checklist.md` | Checklist for auditing a Skill artifact | Auditing an artifact of type Skill |
+| `checklists/agent-audit-checklist.md` | Checklist for auditing an Agent artifact | Auditing an artifact of type Agent |
+| `checklists/claude-md-and-rules-audit-checklist.md` | Checklist for auditing CLAUDE.md or any rules/*.md file | Auditing CLAUDE.md or rules/*.md |

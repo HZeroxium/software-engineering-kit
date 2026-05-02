@@ -1,3 +1,10 @@
+---
+purpose: Naming patterns for Skills, Agents, Rules, and supporting files; naming anti-patterns to avoid
+load-when: Naming a new artifact or auditing naming consistency in an existing artifact set
+tier: domain
+see-also: []
+---
+
 # Naming Conventions
 
 ## Skills

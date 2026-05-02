@@ -1,3 +1,13 @@
+---
+purpose: 7-stage artifact lifecycle (create → validate → use → audit → split/merge → deprecate → retire); criteria for each stage transition
+load-when: Assessing artifact health or maturity; deciding whether to split, merge, deprecate, or retire an artifact
+tier: domain
+see-also:
+  - audit-dimensions.md
+  - stale-artifact-risks.md
+  - deprecation-policy.md
+---
+
 # Artifact Lifecycle
 
 ## 1. Create

@@ -1,3 +1,13 @@
+---
+purpose: Classification of 6 AI artifact types (instruction artifact, skill, agent, hook, MCP, human approval boundary) with use cases, trade-offs, and risks
+load-when: Classifying an extension type or deciding which artifact type fits the target workflow
+tier: foundational
+see-also:
+  - skill-design-principles.md
+  - agent-design-principles.md
+  - rule-design-principles.md
+---
+
 # Artifact Taxonomy
 
 ## Instruction Artifact

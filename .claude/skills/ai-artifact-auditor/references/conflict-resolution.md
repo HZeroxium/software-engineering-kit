@@ -1,3 +1,11 @@
+---
+purpose: Priority model for resolving conflicts between artifacts; resolution patterns for global-rule-vs-skill, skill-vs-skill, and agent-vs-skill conflicts
+load-when: Conflicts detected between artifacts (global rule vs skill, skill vs skill, agent vs skill, user-global vs repo-specific)
+tier: scenario
+see-also:
+  - audit-dimensions.md
+---
+
 # Conflict Resolution
 
 ## Priority Model

@@ -1,3 +1,11 @@
+---
+purpose: Warning signs of over-engineering; recommended artifact progression (prompt → rule → skill → agent → hook → MCP); defer and avoid criteria
+load-when: User is deciding whether to create, defer, or avoid an artifact; or the proposed artifact portfolio seems large or premature
+tier: scenario
+see-also:
+  - artifact-taxonomy.md
+---
+
 # Over-Engineering Risks
 
 ## Warning Signs

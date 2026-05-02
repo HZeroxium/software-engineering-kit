@@ -62,8 +62,10 @@ Useful inputs include:
 
 ## Workflow
 
-1. Infer domain, target tool, workflow frequency, risk profile, and maturity stage.
-2. Classify the needed extension type:
+1. Identify the task type from the user's input (classify extension type, design Skill, design Agent, design Rule, portfolio recommendation, naming review, rollout plan, or artifact generation).
+2. Load only the supporting files whose "Load when" condition matches the identified task type. Consult the Supporting files table at the end of this file. Do not load all files by default.
+3. Infer domain, target tool, workflow frequency, risk profile, and maturity stage.
+4. Classify the needed extension type:
    - Instruction artifact.
    - Skill.
    - Agent/Subagent.
@@ -73,17 +75,17 @@ Useful inputs include:
    - MCP.
    - Security policy.
    - Human approval boundary.
-3. For this phase, restrict generated artifacts to user-global Claude Code:
+5. For this phase, restrict generated artifacts to user-global Claude Code:
    - `~/.claude/CLAUDE.md`
    - `~/.claude/rules/*.md`
    - `~/.claude/skills/*`
    - `~/.claude/agents/*` specifications only when requested.
-4. Decide create, defer, avoid, split, or merge.
-5. Recommend the smallest useful artifact portfolio.
-6. Define purpose, trigger, expected output, dependencies, risks, and validation.
-7. Propose file tree and rollout phase.
-8. Add over-engineering warnings.
-9. Produce a generation prompt if the next step is artifact creation.
+6. Decide create, defer, avoid, split, or merge.
+7. Recommend the smallest useful artifact portfolio.
+8. Define purpose, trigger, expected output, dependencies, risks, and validation.
+9. Propose file tree and rollout phase.
+10. Add over-engineering warnings.
+11. (Optional) Produce a generation prompt if the next step is artifact creation.
 
 ## Output format
 
@@ -138,21 +140,40 @@ For proposed artifacts, define how to validate through:
 
 - Do not invent Claude Code features. If syntax or behavior matters, recommend checking official docs.
 
+## Failure handling
+
+If user context is insufficient to design an artifact:
+
+- List what was provided.
+- List what is still missing: domain, workflow frequency, risk level, existing artifacts, target tool, maintenance capacity.
+- Ask the minimum targeted questions needed — no more than 3–5 — before proceeding.
+- Do not produce a portfolio recommendation until trigger, scope, and maintenance capacity are clear.
+- When proceeding despite incomplete context, label all recommendations as assumptions and provide a verification step.
+
+## Maintenance
+
+- Owner: User-global, self-maintained.
+- Update triggers: Claude Code Skill behavior change; repeated activation failure; scope overlap with `ai-artifact-auditor` grows; new artifact type added to Claude Code.
+- Deprecation condition: If a unified artifact lifecycle skill replaces the designer/auditor split.
+
 ## Supporting files
 
-Load only when useful:
+Identify the task type from the user's input, then load only the files whose "Load when" condition matches the current task. Do not load all files by default.
 
-- templates/artifact-portfolio-recommendation.md
-- templates/skill-spec.md
-- templates/agent-spec.md
-- templates/rule-spec.md
-- templates/rollout-plan.md
-- templates/artifact-generation-request.md
-- references/artifact-taxonomy.md
-- references/skill-design-principles.md
-- references/agent-design-principles.md
-- references/rule-design-principles.md
-- references/overengineering-risks.md
-- references/naming-conventions.md
-- examples/skill-design-example.md
-- examples/agent-design-example.md
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `references/artifact-taxonomy.md` | Classification of 6 AI artifact types with use cases, trade-offs, and risks | Classifying an extension type or deciding which artifact type fits the target workflow |
+| `references/skill-design-principles.md` | Criteria for creating vs avoiding Skills; SKILL.md structure guidance; reference tier convention | Task involves designing, evaluating, or structuring a Skill or its supporting files |
+| `references/agent-design-principles.md` | Criteria for creating vs avoiding Agents; tool boundary defaults; escalation rules | Task involves designing, evaluating, or specifying an Agent or Subagent |
+| `references/rule-design-principles.md` | Criteria for Good vs Poor rules; numbering convention; conflict avoidance | Task involves designing, evaluating, or specifying a rule in `rules/*.md` |
+| `references/overengineering-risks.md` | Warning signs of over-engineering; recommended artifact progression; defer and avoid criteria | User is deciding whether to create, defer, or avoid an artifact; or the proposed portfolio seems large or premature |
+| `references/naming-conventions.md` | Naming patterns for Skills, Agents, Rules, and supporting files; anti-patterns to avoid | Naming a new artifact or auditing naming consistency |
+| `references/reference-index.md` | Graph of all references for this skill: tiers, edges, and load order | Starting a task that involves multiple references; or when unsure which references to load first |
+| `templates/artifact-portfolio-recommendation.md` | Fill-in template for portfolio recommendation output | Producing a full artifact portfolio recommendation |
+| `templates/skill-spec.md` | Fill-in template for Skill specification | Designing or specifying a Skill |
+| `templates/agent-spec.md` | Fill-in template for Agent specification | Designing or specifying an Agent |
+| `templates/rule-spec.md` | Fill-in template for Rule specification | Designing or specifying a rule |
+| `templates/rollout-plan.md` | Fill-in template for phased rollout plan | Task requires a rollout or phased adoption plan |
+| `templates/artifact-generation-request.md` | Copy-ready generation prompt template | Next step is generating a specific artifact |
+| `examples/skill-design-example.md` | Worked example of a Skill design decision | User needs a concrete example to understand the Skill design process |
+| `examples/agent-design-example.md` | Worked example of an Agent design decision | User needs a concrete example for Agent design |

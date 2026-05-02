@@ -1,3 +1,12 @@
+---
+purpose: Criteria for Good vs Poor rules; numbering convention (00–60); conflict avoidance between rules and skills
+load-when: Task involves designing, evaluating, or specifying a rule in rules/*.md
+tier: domain
+see-also:
+  - artifact-taxonomy.md
+  - naming-conventions.md
+---
+
 # Rule Design Principles
 
 ## Good Rule Candidates

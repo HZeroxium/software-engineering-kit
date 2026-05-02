@@ -1,3 +1,11 @@
+---
+purpose: 9 audit dimensions for evaluating any AI artifact — correctness, clarity, consistency, security, maintainability, testability, portability, context efficiency, activation accuracy
+load-when: Starting any artifact audit — load this first, before other references
+tier: foundational
+see-also:
+  - artifact-lifecycle.md
+---
+
 # Audit Dimensions
 
 ## Correctness

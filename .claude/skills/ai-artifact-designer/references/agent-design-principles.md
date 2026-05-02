@@ -1,3 +1,12 @@
+---
+purpose: Criteria for creating vs avoiding Agents; tool boundary defaults (read-only by default); escalation rules for high-risk actions
+load-when: Task involves designing, evaluating, or specifying an Agent or Subagent
+tier: domain
+see-also:
+  - artifact-taxonomy.md
+  - naming-conventions.md
+---
+
 # Agent Design Principles
 
 ## Good Agent Candidates
