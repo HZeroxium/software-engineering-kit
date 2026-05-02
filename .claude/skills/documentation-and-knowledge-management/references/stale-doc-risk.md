@@ -1,3 +1,11 @@
+---
+purpose: High-risk stale claim categories and staleness signals for detecting documentation drift
+load-when: Reviewing existing documentation for currency, or when the doc was written before recent code changes
+tier: scenario
+see-also:
+  - docs-from-source-of-truth.md
+---
+
 # Stale Documentation Risk
 
 ## High-Risk Stale Claims
@@ -34,10 +42,7 @@ Watch for documentation about:
 
 ## Mitigation
 
-- Ground docs in source files.
 - Link to source-of-truth files where appropriate.
 - Prefer short docs with clear ownership.
-- Remove duplicate instructions.
 - Mark assumptions and open questions.
 - Add last-updated date for operational docs.
-- Update docs when commands, architecture, or workflows change.

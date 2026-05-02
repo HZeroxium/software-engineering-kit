@@ -57,6 +57,19 @@ Useful inputs include:
 ## Workflow
 
 1. Identify document type and audience.
+
+   **Doc type → resource selection:**
+
+   | Doc type | Template | References |
+   |----------|----------|------------|
+   | Feature doc | `templates/feature-doc.md` | `docs-from-source-of-truth.md` |
+   | Architecture note | `templates/architecture-note.md` | `docs-from-source-of-truth.md` |
+   | ADR-lite | `templates/adr-lite.md` | `docs-from-source-of-truth.md` |
+   | Jira comment | `templates/jira-comment.md` | — |
+   | Confluence page | `templates/confluence-page.md` | `stale-doc-risk.md` |
+   | AI artifact doc | `templates/ai-artifact-doc.md` | — |
+   | Runbook / troubleshooting | `templates/runbook.md` | `stale-doc-risk.md` |
+
 2. Identify source-of-truth evidence.
 3. Separate confirmed facts from assumptions.
 4. Inspect or request relevant code, configs, tests, APIs, scripts, and existing docs.
@@ -67,27 +80,20 @@ Useful inputs include:
 9. Suggest location if writing inside a repo.
 10. Avoid duplicating or conflicting with existing global, repo-level, tool-specific, Skill, or agent instructions.
 
-## Output format
+## Expected Outputs
 
-Default output:
+Output type: `mixed`
 
-```markdown
-# Documentation Plan
+| Component | Type | Description |
+|-----------|------|-------------|
+| Documentation Plan | analysis | Source-of-truth checklist, doc type, audience |
+| Draft Document | spec / summary | Completed doc in requested format |
+| Staleness Risks | report | Claims flagged as potentially stale |
+| Open Questions | checklist | Missing evidence requiring human input |
+| Validation Checklist | checklist | Pass/fail items before finalization |
+| Suggested Location | recommendation | Where to place the doc in the repo |
 
-# Source-of-Truth Checklist
-
-# Draft
-
-# Staleness Risks
-
-# Open Questions
-
-# Validation Checklist
-
-# Suggested Location
-```
-
-For direct document generation, output only the requested document unless the user asks for analysis.
+For direct document generation (no analysis requested), output only the draft document.
 
 ## Safety boundaries
 
@@ -111,15 +117,18 @@ Before finalizing documentation:
 
 ## Supporting files
 
-Load only when useful:
+Load only when relevant:
 
-- templates/feature-doc.md for feature documentation.
-- templates/architecture-note.md for architecture notes.
-- templates/adr-lite.md for lightweight decisions.
-- templates/jira-comment.md for Jira-ready updates.
-- templates/confluence-page.md for Confluence-ready pages.
-- templates/ai-artifact-doc.md for AI artifact documentation.
-- references/docs-from-source-of-truth.md for evidence discipline.
-- references/documentation-review-checklist.md for doc review.
-- references/stale-doc-risk.md for stale-doc risk detection.
-- examples/feature-doc-example.md for a worked example.
+- `templates/feature-doc.md` — when: feature documentation requested
+- `templates/architecture-note.md` — when: architecture note or system design doc requested
+- `templates/adr-lite.md` — when: decision record requested
+- `templates/jira-comment.md` — when: Jira update or ticket comment requested
+- `templates/confluence-page.md` — when: Confluence page requested
+- `templates/ai-artifact-doc.md` — when: AI artifact (skill, agent, hook, MCP) documentation requested
+- `templates/runbook.md` — when: runbook, operational guide, or troubleshooting doc requested
+- `references/reference-index.md` — when: unsure which references to load, or multiple references needed
+- `references/docs-from-source-of-truth.md` — when: accuracy and source grounding required
+- `references/stale-doc-risk.md` — when: reviewing existing documentation for currency
+- `checklists/documentation-review-checklist.md` — when: reviewing or finalizing documentation quality
+- `examples/feature-doc-example.md` — when: example feature documentation needed
+- `examples/architecture-note-example.md` — when: example architecture note needed

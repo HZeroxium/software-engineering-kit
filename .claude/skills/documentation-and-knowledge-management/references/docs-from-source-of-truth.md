@@ -1,3 +1,11 @@
+---
+purpose: Source priority order and verification discipline for grounding documentation claims in code, tests, configs, and APIs
+load-when: Writing or reviewing any documentation where factual accuracy matters
+tier: foundational
+see-also:
+  - stale-doc-risk.md
+---
+
 # Docs from Source of Truth
 
 ## Source Priority
@@ -44,29 +52,4 @@ Always separate:
 
 ## Commands
 
-Do not document commands unless they are discovered from:
-
-- README.
-- CONTRIBUTING docs.
-- Makefile.
-- package scripts.
-- Maven/Gradle files.
-- Python project files.
-- CI configs.
-- scripts directory.
-- Docker/Compose files.
-- Existing developer docs.
-
-If a command is likely but unverified, label it as an assumption.
-
-## Sensitive Information
-
-Do not include:
-
-- Secrets.
-- Tokens.
-- Passwords.
-- Private keys.
-- Customer data.
-- Sensitive logs.
-- Proprietary internal details beyond what the user approved.
+Discover commands from the repository before documenting them. Do not document commands that cannot be verified. If a command is likely but unverified, label it as an assumption. For the full discovery procedure, see global rule `40-harness-engineering-and-validation.md`.
