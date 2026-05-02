@@ -53,7 +53,7 @@ Look for:
 - Stale guidance.
 - Weak activation.
 - Missing safety.
-- Poor output format.
+- Output type undeclared or semantically inconsistent with its declared type.
 
 ## 5. Split / Merge
 

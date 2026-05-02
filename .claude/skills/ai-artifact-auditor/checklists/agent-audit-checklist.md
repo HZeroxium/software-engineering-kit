@@ -32,7 +32,7 @@
 
 ## Output Contract
 
-- [ ] Expected output format is clear.
+- [ ] Expected output type is declared and output structure matches its semantic purpose.
 - [ ] Severity or priority model exists when useful.
 - [ ] Evidence vs assumption is separated.
 - [ ] Validation recommendation is included.

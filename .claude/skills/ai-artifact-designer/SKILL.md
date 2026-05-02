@@ -82,7 +82,7 @@ Useful inputs include:
    - `~/.claude/agents/*` specifications only when requested.
 6. Decide create, defer, avoid, split, or merge.
 7. Recommend the smallest useful artifact portfolio.
-8. Define purpose, trigger, expected output, dependencies, risks, and validation.
+8. Define purpose, trigger, output type and semantic description, dependencies, risks, and validation.
 9. Propose file tree and rollout phase.
 10. Add over-engineering warnings.
 11. (Optional) Produce a generation prompt if the next step is artifact creation.

@@ -28,7 +28,10 @@ Do not use when:
 
 ## Expected Outputs
 
--
+- Output type: <!-- report | plan | checklist | analysis | spec | recommendation | summary | mixed -->
+- Description: <!-- What the output contains, who consumes it, what decisions it supports -->
+- Format guidance: <!-- Format must be consistent with the declared type above; exact headings are semantic -->
+- Validation criteria: <!-- How to verify the output is correct and useful for this skill's purpose -->
 
 ## Workflow
 

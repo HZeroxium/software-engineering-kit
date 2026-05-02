@@ -37,4 +37,4 @@
 - [ ] Direct slash invocation can be tested.
 - [ ] Automatic activation can be tested.
 - [ ] Boundary non-activation can be tested.
-- [ ] Output format is testable.
+- [ ] Output type is declared and output is semantically consistent with that type.

@@ -16,7 +16,7 @@ Create a Skill when:
 - The workflow repeats often.
 - The trigger is easy to describe.
 - The procedure has a stable shape.
-- The output has a reusable format.
+- The output has a predictable type (e.g., report, plan, checklist, spec).
 - Supporting templates/checklists/examples help.
 - You want progressive context loading.
 
@@ -41,7 +41,7 @@ Keep `SKILL.md` concise:
 - When not to use.
 - Required inputs.
 - Workflow.
-- Output format.
+- Output type and semantic description.
 - Safety boundaries.
 - Validation.
 - Supporting files.
@@ -141,3 +141,23 @@ see-also:
 ```
 
 Keep `see-also` to the most directly useful forward pointers only.
+
+## Output Type Convention
+
+When designing a Skill, declare its output type in `## Expected Outputs` using one of the
+canonical types below. Format must be consistent with the declared type, but exact headings
+and structure are semantic — chosen to fit the content, not imposed by a template.
+
+| Type | Meaning | Format expectation |
+|------|---------|-------------------|
+| `report` | Severity-ordered findings with evidence | Grouped by severity/impact; each finding has evidence and recommended fix |
+| `plan` | Ordered implementation or migration steps | Sequential steps with risks and rollback |
+| `checklist` | Verifiable pass/fail items | Checkable items, possibly grouped by concern |
+| `analysis` | Evidence, hypotheses, conclusions | Diagnostic reasoning structure |
+| `spec` | Interface/contract definition | Inputs, outputs, boundaries, constraints |
+| `recommendation` | Options, trade-offs, decision | Comparison of options with stated recommendation |
+| `summary` | Condensed overview of key points | Flat or brief structured prose |
+| `mixed` | Explicitly multi-type | Must describe each component and its type |
+
+When auditing a Skill's output, evaluate whether the actual output is semantically
+consistent with its declared type — not whether it matches a prescribed set of headings.
