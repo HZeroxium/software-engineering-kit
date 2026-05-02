@@ -1,3 +1,10 @@
+---
+purpose: Regression test purpose, triggers, quality bar, and output expectations
+load-when: Fixing a bug, incident, escaped defect, or recurring edge case
+tier: domain
+see-also: []
+---
+
 # Regression Testing
 
 ## Purpose

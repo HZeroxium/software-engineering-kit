@@ -1,3 +1,10 @@
+---
+purpose: System test use cases, traits, validation targets, and anti-patterns
+load-when: Validating critical user flows, cross-service workflows, release checks, or incident regressions
+tier: domain
+see-also: []
+---
+
 # System Testing
 
 ## Use System Tests For

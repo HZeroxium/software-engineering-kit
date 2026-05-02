@@ -1,3 +1,10 @@
+---
+purpose: API and event contract validation with provider and consumer compatibility concerns
+load-when: Checking REST, GraphQL, gRPC, event schema, SDK, or compatibility behavior
+tier: domain
+see-also: []
+---
+
 # Contract Testing
 
 ## Use Contract Tests For

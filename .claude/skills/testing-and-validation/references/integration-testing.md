@@ -1,3 +1,10 @@
+---
+purpose: Integration test targets, database and API checks, and anti-patterns
+load-when: Testing framework, database, serialization, controller, messaging, cache, or security-filter behavior
+tier: domain
+see-also: []
+---
+
 # Integration Testing
 
 ## Use Integration Tests For

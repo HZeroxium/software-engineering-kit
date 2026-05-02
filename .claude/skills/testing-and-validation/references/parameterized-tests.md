@@ -1,3 +1,10 @@
+---
+purpose: Parameterized test candidates and readability guidance
+load-when: Many inputs should satisfy the same behavior or validation rule
+tier: scenario
+see-also: []
+---
+
 # Parameterized Tests
 
 ## Use Parameterized Tests When

@@ -1,3 +1,10 @@
+---
+purpose: Mock, fake, and container boundary guidance for test isolation decisions
+load-when: Choosing whether to mock, fake, or use a real or containerized dependency
+tier: scenario
+see-also: []
+---
+
 # Mocking Boundaries
 
 ## Mock Good Boundaries

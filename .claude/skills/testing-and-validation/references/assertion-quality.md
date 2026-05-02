@@ -1,3 +1,10 @@
+---
+purpose: Strong vs weak assertions and guidance for diagnosable test failures
+load-when: Reviewing assertion strength or improving brittle or low-signal tests
+tier: scenario
+see-also: []
+---
+
 # Assertion Quality
 
 ## Good Assertions

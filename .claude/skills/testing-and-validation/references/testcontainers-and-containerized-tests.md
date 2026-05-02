@@ -1,3 +1,10 @@
+---
+purpose: Containerized test fit, risks, and review questions for real dependency behavior
+load-when: Real dependency behavior matters, such as SQL dialects, brokers, caches, or protocol emulators
+tier: scenario
+see-also: []
+---
+
 # Testcontainers and Containerized Tests
 
 ## Use Containerized Tests When

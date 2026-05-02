@@ -1,3 +1,16 @@
+---
+purpose: Test level taxonomy and selection rule for choosing the narrowest useful validation
+load-when: Deciding which test level can prove the behavior
+tier: foundational
+see-also:
+  - unit-testing.md
+  - integration-testing.md
+  - system-testing.md
+  - contract-testing.md
+  - regression-testing.md
+  - java-testing-best-practices.md
+---
+
 # Test Levels
 
 ## Unit Tests

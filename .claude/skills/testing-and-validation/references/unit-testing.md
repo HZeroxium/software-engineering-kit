@@ -1,3 +1,10 @@
+---
+purpose: Unit test use cases, traits, structure, and Java notes
+load-when: Designing or reviewing focused logic tests
+tier: domain
+see-also: []
+---
+
 # Unit Testing
 
 ## Use Unit Tests For

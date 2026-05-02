@@ -1,3 +1,10 @@
+---
+purpose: Java and Spring backend testing practices for behavior, transactions, security, and assertions
+load-when: Working in Java, Spring, transaction, security, or backend test contexts
+tier: domain
+see-also: []
+---
+
 # Java Testing Best Practices
 
 ## General
