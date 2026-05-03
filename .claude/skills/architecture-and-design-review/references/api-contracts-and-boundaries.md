@@ -1,3 +1,10 @@
+---
+purpose: API contract review dimensions — compatibility, error model, versioning, DTO boundaries — across all boundary types
+load-when: Reviewing or designing any public/internal API, event schema, module interface, or service contract
+tier: domain
+see-also: []
+---
+
 # API Contracts and Boundaries
 
 ## API Boundary Types

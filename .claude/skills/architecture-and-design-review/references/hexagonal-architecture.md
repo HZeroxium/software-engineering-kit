@@ -1,3 +1,11 @@
+---
+purpose: Ports and adapters pattern; isolating application core from external actors through explicit boundaries
+load-when: Design uses or should use ports/adapters; reviewing adapter isolation, port naming, or infrastructure leakage
+tier: domain
+see-also:
+  - api-contracts-and-boundaries.md
+---
+
 # Hexagonal Architecture
 
 ## Intent

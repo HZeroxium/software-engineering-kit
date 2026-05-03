@@ -1,3 +1,12 @@
+---
+purpose: SOLID heuristics for evaluating module and class responsibility, coupling, and abstraction quality
+load-when: Reviewing class or module design for cohesion, coupling, responsibility scope, or abstraction quality
+tier: foundational
+see-also:
+  - design-patterns.md
+  - clean-architecture.md
+---
+
 # SOLID Principles
 
 ## Purpose

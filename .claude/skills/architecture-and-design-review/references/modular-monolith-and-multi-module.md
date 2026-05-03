@@ -1,3 +1,12 @@
+---
+purpose: Modular monolith boundaries (package, domain, API, persistence, build, team) and multi-module Java conventions
+load-when: Reviewing internal module structure of a single-deployment application or evaluating service extraction readiness
+tier: scenario
+see-also:
+  - layered-architecture.md
+  - evolutionary-architecture.md
+---
+
 # Modular Monolith and Multi-Module Codebases
 
 ## Intent

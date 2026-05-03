@@ -1,3 +1,11 @@
+---
+purpose: Dependency inversion and layer isolation; separating business rules from frameworks, databases, and UI
+load-when: Design separates business logic from infrastructure; dependency direction or testability is a concern
+tier: domain
+see-also:
+  - hexagonal-architecture.md
+---
+
 # Clean Architecture
 
 ## Intent

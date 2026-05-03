@@ -1,3 +1,12 @@
+---
+purpose: Meta-principle for safe architecture evolution; when to commit, defer, or reverse decisions
+load-when: Evaluating architectural commitment level, assessing decision reversibility, or detecting over-design
+tier: foundational
+see-also:
+  - solid-principles.md
+  - api-contracts-and-boundaries.md
+---
+
 # Evolutionary Architecture
 
 ## Intent

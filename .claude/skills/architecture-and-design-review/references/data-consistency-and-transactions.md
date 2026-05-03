@@ -1,3 +1,11 @@
+---
+purpose: Transaction boundary review, consistency models, common risks (lost update, partial commit), and coordination patterns
+load-when: Reviewing transaction scope, distributed consistency, optimistic locking, outbox, saga, or idempotency
+tier: scenario
+see-also:
+  - api-contracts-and-boundaries.md
+---
+
 # Data Consistency and Transactions
 
 ## Consistency Questions

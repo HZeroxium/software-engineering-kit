@@ -1,3 +1,12 @@
+---
+purpose: When to use microservices; ownership, data, contract, and operational prerequisites; common decomposition risks
+load-when: Evaluating service decomposition, microservices adoption, or cross-service communication design
+tier: scenario
+see-also:
+  - evolutionary-architecture.md
+  - api-contracts-and-boundaries.md
+---
+
 # Microservices
 
 ## Intent

@@ -64,9 +64,19 @@ Useful inputs include:
 10. Define testing and validation strategy.
 11. Produce an architecture decision note when useful.
 
-## Output format
+## Expected Outputs
 
-Default output:
+**Output type:** `mixed`
+
+Components:
+- `recommendation` — design options with trade-offs and stated recommendation
+- `analysis` — problem framing, confirmed facts, design force identification
+- `spec` — module/component boundaries, dependency direction, transaction model
+- `summary` — architecture decision note when scope warrants it
+
+For smaller tasks, compress sections while preserving trade-offs and risks.
+
+Default output structure:
 
 ```markdown
 # Problem Framing
@@ -98,8 +108,6 @@ Default output:
 # Architecture Decision Note
 ```
 
-For smaller tasks, compress sections while preserving trade-offs and risks.
-
 ## Safety boundaries
 
 - Do not invent repo structure, APIs, framework behavior, commands, schemas, or deployment topology.
@@ -130,7 +138,7 @@ If context is insufficient:
 
 - State uncertainty.
 - List assumptions.
-  Ask targeted questions only when necessary.
+- Ask targeted questions only when necessary.
 - Prefer a conservative design.
 - Avoid implementation until scope and risk are clear.
 
@@ -142,17 +150,18 @@ Load only when useful:
 - templates/design-options-analysis.md
 - templates/module-boundary-review.md
 - templates/architecture-decision-note.md
+- references/reference-index.md
 - references/clean-architecture.md
 - references/layered-architecture.md
 - references/hexagonal-architecture.md
-  references/microservices.md
+- references/microservices.md
 - references/event-driven-architecture.md
-  references/modular-monolith-and-multi-module.md
+- references/modular-monolith-and-multi-module.md
 - references/solid-principles.md
-  references/design-patterns.md
+- references/design-patterns.md
 - references/api-contracts-and-boundaries.md
 - references/data-consistency-and-transactions.md
-  references/evolutionary-architecture.md
+- references/evolutionary-architecture.md
 - checklists/architecture-review-checklist.md
 - checklists/module-design-checklist.md
-  checklists/service-design-checklist.md
+- checklists/service-design-checklist.md

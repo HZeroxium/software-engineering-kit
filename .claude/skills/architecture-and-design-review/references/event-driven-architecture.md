@@ -1,3 +1,11 @@
+---
+purpose: Event design principles (naming, versioning, idempotency, ordering, reliability) and common EDA patterns
+load-when: Design involves async messaging, event publishing/consuming, or event-driven workflows
+tier: scenario
+see-also:
+  - api-contracts-and-boundaries.md
+---
+
 # Event-Driven Architecture
 
 ## Intent

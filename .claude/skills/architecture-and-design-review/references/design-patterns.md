@@ -1,3 +1,11 @@
+---
+purpose: Common structural and behavioral patterns (Strategy, Factory, Adapter, Repository, etc.) with applicability criteria
+load-when: Evaluating whether a design pattern solves a recurring structural or behavioral force
+tier: domain
+see-also:
+  - api-contracts-and-boundaries.md
+---
+
 # Design Patterns
 
 ## Principle

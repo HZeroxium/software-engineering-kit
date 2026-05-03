@@ -1,3 +1,11 @@
+---
+purpose: Layer structure (controller → service → domain → persistence) with responsibility rules and common risks
+load-when: Application uses conventional layers; reviewing layer responsibility, fat controllers, or dependency direction
+tier: domain
+see-also:
+  - clean-architecture.md
+---
+
 # Layered Architecture
 
 ## Intent
