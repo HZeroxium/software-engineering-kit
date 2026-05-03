@@ -1,3 +1,11 @@
+---
+purpose: Consumer idempotency rules, deduplication key design, failure modes for duplicate message delivery
+load-when: Consumer may receive duplicate messages, or retry behavior may cause repeated side effects
+tier: domain
+see-also:
+  - outbox-inbox-patterns.md
+---
+
 # Idempotent Consumers
 
 ## Purpose

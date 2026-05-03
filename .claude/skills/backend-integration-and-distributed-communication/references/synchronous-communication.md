@@ -1,3 +1,13 @@
+---
+purpose: When to use synchronous communication, design questions, and failure modes for HTTP/RPC/internal API calls
+load-when: Task involves HTTP APIs, RPC, internal service calls, SDK/client library integration, or external provider APIs
+tier: foundational
+see-also:
+  - retries-timeouts-deadlines.md
+  - circuit-breakers-bulkheads-backpressure.md
+  - api-gateway-and-bff.md
+---
+
 # Synchronous Communication
 
 ## Purpose

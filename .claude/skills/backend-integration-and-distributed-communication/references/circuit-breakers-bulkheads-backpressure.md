@@ -1,3 +1,10 @@
+---
+purpose: Circuit breaker, bulkhead, and backpressure patterns for protecting service reliability under dependency failure or overload
+load-when: Dependency failures are frequent, resource pools are shared, consumer lag is detected, or external rate limiting is encountered
+tier: scenario
+see-also: []
+---
+
 # Circuit Breakers, Bulkheads, and Backpressure
 
 ## Circuit Breaker

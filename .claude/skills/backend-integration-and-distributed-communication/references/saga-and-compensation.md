@@ -1,3 +1,10 @@
+---
+purpose: Saga pattern for distributed workflow coordination without distributed transactions, compensation design, and failure modes
+load-when: Workflow spans multiple services or resources, atomic distributed transaction is unavailable, or compensation logic is required
+tier: scenario
+see-also: []
+---
+
 # Saga and Compensation
 
 ## Purpose

@@ -1,3 +1,10 @@
+---
+purpose: Outbox and inbox pattern design for reliable event publishing and message deduplication
+load-when: State change must reliably publish an event/message, or consumer must deduplicate received messages
+tier: domain
+see-also: []
+---
+
 # Outbox / Inbox Patterns
 
 ## Outbox

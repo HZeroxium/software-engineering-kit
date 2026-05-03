@@ -7,6 +7,14 @@ description: Framework-agnostic backend Skill for service integration, RPC/inter
 
 Use this Skill when a backend task involves service-to-service communication, RPC/internal APIs, message queues, pub/sub, event streams, webhooks, external APIs, retries, timeouts, idempotency, outbox/inbox, or distributed workflows.
 
+## Required Inputs
+
+- Source of communication (caller, message producer, webhook sender).
+- Target of communication (callee, consumer, external API).
+- Communication style if known (sync / async / webhook / event stream).
+- Existing timeout, retry, or delivery configuration if available.
+- Evidence of existing integration code or contracts if available.
+
 ## Purpose
 
 Analyze backend service integration and distributed communication.
@@ -46,7 +54,16 @@ Do not:
 8. Define test and observability plan.
 9. Separate confirmed facts, assumptions, hypotheses, and unknowns.
 
-## Expected Output
+## Expected Outputs
+
+Output type: `mixed`
+
+Components:
+
+- `analysis` — communication style classification, contract/schema risk, idempotency assessment.
+- `report` — distributed failure modes, duplicate side-effect risks.
+- `recommendation` — pattern selection (outbox, saga, circuit breaker, BFF, etc.) when applicable.
+- `plan` — test strategy and observability requirements.
 
 Return:
 
@@ -59,6 +76,15 @@ Return:
 - Test and observability plan.
 - Open questions and required repo evidence.
 
+## Supporting Files
+
+Load `references/reference-index.md` first to navigate this skill's supporting files.
+
+- `references/` — conceptual guides with tier-based frontmatter for progressive context loading.
+- `checklists/` — verifiable pass/fail items per concern area (integration, event-driven, idempotency, retry/timeout).
+- `templates/` — fill-in-the-blank analysis and review output formats.
+- `examples/` — worked examples for output calibration.
+
 ## Safety Boundaries
 
 Ask for clarification or repo evidence when:
@@ -68,3 +94,7 @@ Ask for clarification or repo evidence when:
 - The operation has external side effects.
 - The workflow touches payments, orders, notifications, data mutation, or production integrations.
 - Retry behavior could amplify load or cause duplicate effects.
+
+## Validation
+
+Smoke test by providing a real or synthetic integration scenario (e.g., "service A calls service B over HTTP with no timeout configured"). Expected output: communication style classified as synchronous, timeout gap identified as risk, retry safety flagged as unknown, and at least one observability gap noted.

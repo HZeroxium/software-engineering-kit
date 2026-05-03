@@ -1,3 +1,10 @@
+---
+purpose: API gateway and BFF pattern scope, acceptable vs risky gateway responsibilities, and review questions for cross-cutting boundaries
+load-when: Integration involves an API gateway, BFF layer, protocol translation, or cross-cutting client-facing boundary
+tier: scenario
+see-also: []
+---
+
 # API Gateway and BFF
 
 ## Purpose

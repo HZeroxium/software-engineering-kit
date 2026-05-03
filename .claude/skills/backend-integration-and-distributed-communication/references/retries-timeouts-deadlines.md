@@ -1,3 +1,11 @@
+---
+purpose: Rules and review questions for timeout/deadline configuration, retry classification, backoff, and retry-storm prevention
+load-when: Defining or reviewing retry policy, timeout values, deadline propagation, or backoff strategy
+tier: domain
+see-also:
+  - idempotent-consumers.md
+---
+
 # Retries, Timeouts, and Deadlines
 
 ## Purpose
