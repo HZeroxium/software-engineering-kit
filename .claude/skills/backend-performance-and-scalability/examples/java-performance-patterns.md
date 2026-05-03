@@ -1,4 +1,4 @@
-# Java Performance Examples
+# Java Performance Patterns
 
 Examples are illustrative only. Follow repository conventions.
 

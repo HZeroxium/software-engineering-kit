@@ -1,3 +1,11 @@
+---
+purpose: Core principle — measure before optimize; measurement sources, workflow, and anti-patterns
+load-when: Starting any performance analysis — load this first alongside latency-throughput-and-tail-latency.md
+tier: foundational
+see-also:
+  - latency-throughput-and-tail-latency.md
+---
+
 # Performance Measurement Discipline
 
 ## Principle

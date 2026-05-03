@@ -1,3 +1,11 @@
+---
+purpose: Capacity planning — demand inputs, resource model, headroom estimation, saturation signals, and scaling triggers
+load-when: Task involves traffic growth, quota limits, scaling decisions, or peak capacity estimation
+tier: domain
+see-also:
+  - load-stress-spike-soak-testing.md
+---
+
 # Capacity Planning
 
 ## Purpose

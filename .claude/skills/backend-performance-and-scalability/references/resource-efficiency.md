@@ -1,3 +1,11 @@
+---
+purpose: Resource efficiency review — CPU, memory, IO, network, connection leaks, excessive logging, and wasteful patterns
+load-when: Task involves CPU pressure, memory growth, connection leaks, or IO-bound operations
+tier: domain
+see-also:
+  - capacity-planning.md
+---
+
 # Resource Efficiency
 
 ## Purpose

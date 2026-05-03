@@ -22,6 +22,18 @@ Do not:
 - Assume specific databases, caches, profilers, monitoring tools, or cloud platforms.
 - Invent metrics, benchmark commands, load-test tools, or query plans.
 - Treat average latency as enough for production performance.
+- Review distributed system performance across service boundaries — use `backend-integration-and-distributed-communication` for fan-out, saga latency, and distributed coordination costs.
+
+## Required Inputs
+
+Collect before analysis:
+
+- Performance goal or SLO target (latency budget, throughput, error rate).
+- Available evidence: metrics, traces, logs, profiles, query plans, benchmarks, load tests.
+- Traffic shape: average load, peak load, growth rate.
+- Stack context: database, cache, external dependencies, concurrency model.
+
+If inputs are missing, label conclusions as hypotheses and request measurement.
 
 ## Workflow
 
@@ -34,7 +46,12 @@ Do not:
 7. Define validation metrics and load-test plan.
 8. Separate facts, assumptions, hypotheses, and unknowns.
 
-## Expected Output
+## Expected Outputs
+
+**Output type: mixed**
+
+- Component 1 — `analysis`: bottleneck hypothesis table with evidence, confidence level, and validation steps.
+- Component 2 — `plan`: ordered optimization recommendations with risk, validation metrics, and load-test plan.
 
 Return:
 
@@ -56,3 +73,37 @@ Ask for clarification or repo evidence when:
 - Proposed optimization changes behavior or consistency.
 - Load testing may affect shared or production systems.
 - Internal libraries manage concurrency, pooling, caching, or IO behavior.
+
+## Validation
+
+Test this Skill with:
+
+- A PR with a known N+1 query — verify bottleneck hypothesis is identified and load-test plan is recommended.
+- A vague "make it faster" request — verify it asks for targets and evidence before recommending optimizations.
+- A pure functional bug report — verify this Skill does not activate.
+
+## Supporting Files
+
+| Folder | File | Purpose |
+|--------|------|---------|
+| `references/` | `reference-index.md` | Semantic graph and load-order guide for all references |
+| `references/` | `performance-measurement-discipline.md` | Core principle: measure before optimize |
+| `references/` | `latency-throughput-and-tail-latency.md` | Core vocabulary: latency, throughput, p95/p99, saturation |
+| `references/` | `database-performance.md` | DB query, index, N+1, and connection pool analysis |
+| `references/` | `caching-performance.md` | Cache hit rate, invalidation, and correctness risks |
+| `references/` | `concurrency-and-resource-pools.md` | Thread pools, connection pools, and resource exhaustion |
+| `references/` | `resource-efficiency.md` | CPU, memory, IO, and network efficiency review |
+| `references/` | `capacity-planning.md` | Headroom estimation, scaling triggers, and quota awareness |
+| `references/` | `load-stress-spike-soak-testing.md` | Load test types, design, safety, and pass/fail criteria |
+| `checklists/` | `performance-review-checklist.md` | End-to-end performance review checklist |
+| `checklists/` | `database-performance-checklist.md` | Database-specific performance checklist |
+| `checklists/` | `load-testing-checklist.md` | Load test readiness and execution checklist |
+| `checklists/` | `scalability-checklist.md` | Scalability limiter and growth dimension checklist |
+| `templates/` | `performance-review.md` | Fill-in-the-blank performance review output |
+| `templates/` | `load-test-plan.md` | Load test plan template |
+| `templates/` | `scalability-analysis.md` | Scalability analysis template |
+| `templates/` | `bottleneck-hypothesis-table.md` | Hypothesis table for bottleneck investigation |
+| `templates/` | `capacity-planning-note.md` | Capacity planning note template |
+| `templates/` | `cost-performance-tradeoff.md` | Cost vs performance decision template |
+| `examples/` | `java-backend-performance-review-example.md` | Java N+1 query pattern review example |
+| `examples/` | `java-performance-patterns.md` | Java-specific performance patterns and anti-patterns |

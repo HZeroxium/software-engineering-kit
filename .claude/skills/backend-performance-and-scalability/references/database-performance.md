@@ -1,3 +1,11 @@
+---
+purpose: Database bottleneck analysis — queries, indexes, N+1, pagination, lock contention, connection pools
+load-when: Task involves database queries, slow queries, missing indexes, N+1 patterns, or DB connection limits
+tier: domain
+see-also:
+  - concurrency-and-resource-pools.md
+---
+
 # Database Performance
 
 ## Purpose

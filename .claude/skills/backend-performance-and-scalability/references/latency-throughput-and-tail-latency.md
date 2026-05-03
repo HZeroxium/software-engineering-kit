@@ -1,3 +1,12 @@
+---
+purpose: Core vocabulary — latency, throughput, p95/p99, saturation; failure modes from averaging or ignoring tail latency
+load-when: Understanding or explaining core performance metrics; reviewing any latency-sensitive feature
+tier: foundational
+see-also:
+  - database-performance.md
+  - caching-performance.md
+---
+
 # Latency, Throughput, and Tail Latency
 
 ## Concepts

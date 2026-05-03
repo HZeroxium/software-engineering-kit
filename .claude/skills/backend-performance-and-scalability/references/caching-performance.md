@@ -1,3 +1,10 @@
+---
+purpose: Caching performance and correctness — hit rate, invalidation, stampede, stale data, and cache failure modes
+load-when: Task involves caching strategy, cache correctness, low hit rate, or cache outage behavior
+tier: domain
+see-also: []
+---
+
 # Caching Performance
 
 ## Purpose

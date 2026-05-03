@@ -1,3 +1,11 @@
+---
+purpose: Concurrency safety and resource pool sizing — thread pools, connection pools, locks, backpressure, and exhaustion failure modes
+load-when: Task involves concurrency, thread contention, connection pool limits, or queue consumer design
+tier: domain
+see-also:
+  - resource-efficiency.md
+---
+
 # Concurrency and Resource Pools
 
 ## Purpose

@@ -1,3 +1,10 @@
+---
+purpose: Load test types and design — load, stress, spike, soak; test design questions, safety, and pass/fail criteria
+load-when: Load testing is part of the analysis, validation plan, or performance acceptance criteria
+tier: scenario
+see-also: []
+---
+
 # Load, Stress, Spike, and Soak Testing
 
 ## Load Test
