@@ -1,3 +1,12 @@
+---
+purpose: Routing table mapping change signals to backend review scopes; multi-scope examples for common change types
+load-when: Classifying which backend scopes are affected by a given diff, PR, or design change
+tier: foundational
+see-also:
+  - backend-production-risk-model.md
+  - backend-review-workflow.md
+---
+
 # Backend Review Scope Routing
 
 ## Scope Routing

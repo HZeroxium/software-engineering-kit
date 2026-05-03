@@ -34,6 +34,13 @@ Use when:
 - Backend risk spans multiple areas.
 - The user asks for backend review triage or review orchestration.
 
+## Required Inputs
+
+- **Review target:** diff, PR description, file list, design document, or AI-generated code.
+- **Context:** affected modules, changed files, commit description, or feature requirements.
+- **Repository conventions** (optional): existing patterns, internal library examples, test structure.
+- **Validation evidence** (optional): CI output, test results, or build status when available.
+
 ## Non-Goals
 
 Do not:
@@ -84,7 +91,36 @@ Classify findings by:
 - Require validation via tests/build/typecheck/lint/static analysis/CI/logs/metrics/manual review where applicable.
 - If context is missing, say what is needed.
 
-## Expected Output
+## Supporting Files
+
+**References** — load progressively based on active review scope:
+
+| File | Tier | Load when |
+|------|------|-----------|
+| `references/reference-index.md` | index | Overview of the reference graph before loading individual files |
+| `references/backend-review-scope-routing.md` | foundational | Classifying which backend scopes are affected |
+| `references/backend-review-priority-model.md` | foundational | Assigning severity to findings |
+| `references/backend-production-risk-model.md` | domain | Identifying high-risk production areas for deeper scrutiny |
+| `references/backend-review-workflow.md` | domain | Executing a full multi-scope review pass |
+| `references/backend-business-logic-correctness.md` | scenario | Domain/API scope classified as affected |
+
+**Checklists:**
+- `checklists/backend-review-checklist.md` — full review pass across all dimensions
+- `checklists/backend-ai-generated-code-review-checklist.md` — AI-generated code review
+- `checklists/backend-before-merge-checklist.md` — pre-merge gate
+
+**Templates:**
+- `templates/backend-review-report.md` — primary output report
+- `templates/backend-scope-review-matrix.md` — scope classification table
+- `templates/backend-minimal-fix-plan.md` — per-finding minimal fix
+- `templates/backend-review-handoff.md` — handoff to specialized skill
+
+**Examples:**
+- `examples/backend-review-example.md` — complete review of an AI-generated Java backend diff
+
+## Expected Outputs
+
+**Output type:** `report` — severity-ordered findings (Blocking / Important / Optional), each with scope, evidence, failure mode, minimal fix, and validation method.
 
 Use these templates when useful:
 
@@ -92,6 +128,15 @@ Use these templates when useful:
 - `templates/backend-scope-review-matrix.md`
 - `templates/backend-minimal-fix-plan.md`
 - `templates/backend-review-handoff.md`
+
+## Validation
+
+Test this Skill with:
+
+- **Direct invocation:** `/backend-review-orchestrator` with a diff or PR description as input.
+- **Automatic activation:** "Review this backend PR diff: [diff]" — should auto-activate.
+- **Boundary — should not activate:** "How should I design a new API?" — design tasks use `backend-feature-design`.
+- **Output check:** Result uses `report` type — findings grouped Blocking/Important/Optional, each with scope, evidence, failure mode, minimal fix, and validation method.
 
 ## Final Response Shape
 

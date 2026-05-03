@@ -1,3 +1,11 @@
+---
+purpose: Blocking, Important, and Optional severity thresholds with examples for backend review findings
+load-when: Assigning severity to a finding or calibrating the overall risk level of a review
+tier: foundational
+see-also:
+  - backend-production-risk-model.md
+---
+
 # Backend Review Priority Model
 
 ## Blocking

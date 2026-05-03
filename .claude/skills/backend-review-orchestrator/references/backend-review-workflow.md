@@ -1,3 +1,11 @@
+---
+purpose: Expanded step-by-step procedure for executing a full multi-scope backend review pass
+load-when: Executing a structured multi-scope review — provides detailed inspection procedure per step
+tier: domain
+see-also:
+  - backend-business-logic-correctness.md
+---
+
 # Backend Review Workflow
 
 ## Workflow
@@ -25,11 +33,3 @@
 
 8. **State remaining risk**
    - Do not imply full approval when validation is missing.
-
-## Review Rules
-
-- Critique before rewriting.
-- Prioritize correctness, security, data consistency, concurrency, performance, observability, maintainability, and testability.
-- Identify issues first, then suggest minimal fixes.
-- Preserve existing style unless harmful.
-- Avoid broad rewrites unless requested.

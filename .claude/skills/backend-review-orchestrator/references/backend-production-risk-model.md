@@ -1,3 +1,10 @@
+---
+purpose: High-risk backend areas and production failure mode table for prioritizing review scrutiny
+load-when: Prioritizing which areas require deeper scrutiny, stronger tests, or explicit human review
+tier: domain
+see-also: []
+---
+
 # Backend Production Risk Model
 
 ## High-Risk Areas

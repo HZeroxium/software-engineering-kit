@@ -1,3 +1,10 @@
+---
+purpose: Domain/API correctness review questions, Java-oriented inspection signals, and common business logic bug patterns
+load-when: Domain/API scope is classified as affected in the review
+tier: scenario
+see-also: []
+---
+
 # Backend Business Logic Correctness
 
 ## Review Questions
