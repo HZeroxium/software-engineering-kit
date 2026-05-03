@@ -1,3 +1,10 @@
+---
+purpose: Transaction boundary rules, consistency patterns (outbox, saga, idempotency), and failure matrix for data-affecting features
+load-when: Feature involves writes, side effects, or cross-service calls — any time data consistency or transaction safety matters
+tier: domain
+see-also: []
+---
+
 # Transaction and Consistency Thinking
 
 ## Purpose

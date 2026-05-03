@@ -1,3 +1,12 @@
+---
+purpose: Core reasoning sequence for translating business capability into domain concepts, API contract, application workflow, and data ownership
+load-when: Early design phase — translating feature intent into domain concepts, API contract, or data ownership
+tier: foundational
+see-also:
+  - backend-design-workflow.md
+  - transaction-and-consistency-thinking.md
+---
+
 # Domain to API to Data Flow
 
 ## Purpose

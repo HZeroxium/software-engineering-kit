@@ -36,6 +36,17 @@ Use when:
 - The task is non-trivial and should be designed before implementation.
 - The work may affect backend APIs, business logic, persistence, security, integrations, reliability, performance, observability, or tests.
 
+## Required Inputs
+
+| Input | Required? | Notes |
+|-------|-----------|-------|
+| Feature requirements or user story | Required | Minimum viable description of intended behavior |
+| Current system behavior | Recommended | What exists today that this changes or extends |
+| Existing API/schema contracts | If affected | Required when changing public APIs or persistence |
+| Security and access control constraints | If known | Auth model, tenant scope, data sensitivity |
+| Scale/performance constraints | If known | Expected load, latency SLAs, data volume |
+| Repo context (modules, frameworks) | If available | Avoids inventing internal library behavior |
+
 ## Non-Goals
 
 Do not:
@@ -46,6 +57,14 @@ Do not:
 - Invent internal library APIs or framework behavior.
 - Skip security, validation, observability, or testing for production-impacting work.
 - Produce a large speculative design when requirements are insufficient.
+
+## Safety Boundaries
+
+- Do not implement code — output is design only; hand off to `backend-feature-implementation` for execution.
+- Do not produce a speculative design when requirements are insufficient — clarify feature intent first.
+- Do not invent internal library APIs, framework behavior, file paths, or validation commands.
+- Flag open questions explicitly rather than silently resolving ambiguous security, data, or compatibility concerns.
+- Require human approval before design decisions that affect public APIs, schema migrations, security model, or production configuration.
 
 ## Default Backend Scopes
 
@@ -63,17 +82,12 @@ Analyze across these scopes as relevant:
 
 ## Workflow
 
-1. Clarify the feature intent and business capability.
-2. Identify domain concepts, invariants, actors, and state transitions.
-3. Define API/interface impact without leaking implementation details.
-4. Design application workflow and orchestration.
-5. Identify data ownership, persistence changes, consistency, caching, and migration impact.
-6. Identify security/trust boundaries, authorization, tenant isolation, secrets, and audit needs.
-7. Identify sync/async integration boundaries, retries, timeouts, idempotency, and failure handling.
-8. Identify reliability, performance, scalability, observability, and operational concerns.
-9. Define test and validation strategy.
-10. Record assumptions, open questions, trade-offs, and risks.
-11. Produce handoff to `backend-feature-implementation`.
+1. **Understand and model** — clarify feature intent, domain concepts, actors, and state transitions.
+2. **Design contracts** — define API/interface impact, application workflow, data impact, and security/trust boundaries.
+3. **Design operations** — identify integration boundaries, reliability/performance/observability concerns, and validation strategy.
+4. **Record and hand off** — document assumptions, open questions, risks, and produce handoff to `backend-feature-implementation`.
+
+See `references/backend-design-workflow.md` for detailed steps and quality bar per phase.
 
 ## Evidence Rules
 
@@ -82,54 +96,12 @@ Analyze across these scopes as relevant:
 - If internal libraries are involved, infer behavior from actual usage and tests only.
 - If validation commands are unknown, do not invent them.
 
-## Expected Output
+## Expected Outputs
 
-Use the templates when useful:
+Output type: `mixed` — spec (API contract, domain model), plan (workflow steps, implementation handoff), recommendation (design options with trade-offs), risk register (risks and open questions), summary (design overview).
 
-- `templates/backend-feature-design-doc.md`
-- `templates/backend-technical-design-summary.md`
-- `templates/backend-design-options.md`
-- `templates/backend-api-data-flow.md`
-- `templates/backend-risk-and-validation-plan.md`
-
-## Final Response Shape
-
-```text
-# Backend Feature Design
-
-## Summary
-...
-
-## Problem Framing
-...
-
-## Backend Capability and Domain Concepts
-...
-
-## API / Interface Impact
-...
-
-## Application Workflow
-...
-
-## Data / Persistence Impact
-...
-
-## Security and Trust
-...
-
-## Integration and Distributed Communication
-...
-
-## Reliability, Performance, and Observability
-...
-
-## Test and Validation Strategy
-...
-
-## Risks and Open Questions
-...
-
-## Handoff to backend-feature-implementation
-...
-```
+Primary template: `templates/backend-feature-design-doc.md`
+Quick design: `templates/backend-technical-design-summary.md`
+Option analysis: `templates/backend-design-options.md`
+API and data flow: `templates/backend-api-data-flow.md`
+Risk tracking: `templates/backend-risk-and-validation-plan.md`

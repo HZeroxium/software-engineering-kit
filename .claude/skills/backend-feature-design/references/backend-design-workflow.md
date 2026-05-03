@@ -1,3 +1,12 @@
+---
+purpose: 10-step procedural workflow for backend feature design with quality bar and readiness criteria
+load-when: Executing a full backend feature design — provides step-by-step procedure and quality bar per scope
+tier: domain
+see-also:
+  - backend-design-tradeoffs.md
+  - backend-design-handoff-to-implementation.md
+---
+
 # Backend Design Workflow
 
 ## Principle

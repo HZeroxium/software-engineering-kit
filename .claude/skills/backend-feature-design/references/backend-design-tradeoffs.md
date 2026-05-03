@@ -1,3 +1,10 @@
+---
+purpose: Common backend design trade-offs table and decision record pattern for making design choices explicit
+load-when: Choosing between competing design options — sync vs async, consistency models, abstraction levels, API reuse vs new surface
+tier: scenario
+see-also: []
+---
+
 # Backend Design Trade-Offs
 
 ## Purpose
