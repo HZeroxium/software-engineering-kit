@@ -1,3 +1,10 @@
+---
+purpose: Trace boundary identification, context propagation rules, and failure modes for distributed and async tracing
+load-when: Reviewing or designing distributed tracing for a backend change
+tier: domain
+see-also: []
+---
+
 # Tracing and Context Propagation
 
 ## Purpose

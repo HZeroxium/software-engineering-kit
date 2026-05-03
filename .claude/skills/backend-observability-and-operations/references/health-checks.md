@@ -1,3 +1,10 @@
+---
+purpose: Liveness, readiness, and startup check types with design questions and failure modes to avoid
+load-when: Change affects health check behavior, adds a new dependency, or modifies traffic routing behavior
+tier: domain
+see-also: []
+---
+
 # Health Checks
 
 ## Types

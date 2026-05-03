@@ -1,3 +1,10 @@
+---
+purpose: Metric type selection, label/dimension rules, cardinality risk identification, and review questions for metric design
+load-when: Reviewing or designing metrics for a backend change
+tier: domain
+see-also: []
+---
+
 # Metrics Design and Cardinality
 
 ## Purpose

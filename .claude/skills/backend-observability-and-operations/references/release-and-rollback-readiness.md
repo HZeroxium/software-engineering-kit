@@ -1,3 +1,10 @@
+---
+purpose: Backward-compatibility, expand-contract migration, feature flag, and rollback failure modes for safe backend releases
+load-when: Release or rollback concerns are present — canary, schema migration, compatibility risk, or feature flag requirement
+tier: scenario
+see-also: []
+---
+
 # Release and Rollback Readiness
 
 ## Purpose

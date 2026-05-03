@@ -1,3 +1,15 @@
+---
+purpose: Three observability signal types (metrics, logs, traces) and the 4 operator questions that guide signal selection
+load-when: Starting any observability review — load first to establish signal vocabulary before loading domain references
+tier: foundational
+see-also:
+  - structured-logging.md
+  - metrics-design-and-cardinality.md
+  - tracing-and-context-propagation.md
+  - alerting-and-runbooks.md
+  - observability-review-workflow.md
+---
+
 # Metrics, Logs, and Traces
 
 ## Metrics

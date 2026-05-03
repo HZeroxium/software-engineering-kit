@@ -1,3 +1,10 @@
+---
+purpose: Structured log field design, sensitive-data avoidance rules, and common logging smells to detect in review
+load-when: Reviewing or planning logging for a backend change
+tier: domain
+see-also: []
+---
+
 # Structured Logging
 
 ## Purpose

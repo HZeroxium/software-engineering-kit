@@ -1,3 +1,10 @@
+---
+purpose: Environment config, secrets separation, feature flags, kill switches, config validation, and auditability for backend services
+load-when: Change adds or modifies runtime configuration, feature flags, kill switches, or environment-specific behavior
+tier: scenario
+see-also: []
+---
+
 # Runtime Configuration
 
 ## Purpose
