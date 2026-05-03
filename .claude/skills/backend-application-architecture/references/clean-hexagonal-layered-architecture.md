@@ -1,3 +1,11 @@
+---
+purpose: Vocabulary and trade-off guidance for Clean, Hexagonal, and Layered architecture styles
+load-when: Task involves architecture style selection or layer responsibility review
+tier: foundational
+see-also:
+  - dependency-architecture.md
+---
+
 # Clean, Hexagonal, and Layered Architecture
 
 ## Purpose

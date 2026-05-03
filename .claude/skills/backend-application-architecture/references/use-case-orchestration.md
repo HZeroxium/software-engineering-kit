@@ -1,3 +1,11 @@
+---
+purpose: Orchestration responsibilities, command/query classification, and workflow smells for a single use case
+load-when: Designing or reviewing use-case orchestration logic
+tier: domain
+see-also:
+  - transaction-boundaries.md
+---
+
 # Use-Case Orchestration
 
 ## Purpose

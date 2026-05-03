@@ -1,3 +1,11 @@
+---
+purpose: Multi-step workflow design — durable steps, retry, compensation, stuck-state detection, and failure recovery
+load-when: Designing or reviewing multi-step async, event-driven, job, or saga-like workflows
+tier: domain
+see-also:
+  - state-machines.md
+---
+
 # Workflow Orchestration
 
 ## Purpose

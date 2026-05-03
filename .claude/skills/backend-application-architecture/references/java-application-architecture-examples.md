@@ -1,3 +1,10 @@
+---
+purpose: Java code sketches for use case, port interface, and state rule — illustrative only, not normative
+load-when: Java code examples are explicitly requested to illustrate architecture concepts
+tier: scenario
+see-also: []
+---
+
 # Java Application Architecture Examples
 
 Examples are illustrative only. Follow repository conventions.

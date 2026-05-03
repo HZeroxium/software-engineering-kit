@@ -1,3 +1,11 @@
+---
+purpose: Responsibilities and anti-patterns for application services; god service detection
+load-when: Designing or reviewing application service boundaries
+tier: domain
+see-also:
+  - use-case-orchestration.md
+---
+
 # Application Services
 
 ## Purpose

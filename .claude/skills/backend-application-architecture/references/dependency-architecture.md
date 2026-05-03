@@ -1,3 +1,11 @@
+---
+purpose: Core concepts for dependency direction, inversion, injection, composition root, ports/adapters, and module cycles
+load-when: Reviewing dependency direction, cycles, or coupling between modules
+tier: foundational
+see-also:
+  - modular-monolith-and-multi-module.md
+---
+
 # Dependency Architecture
 
 ## Purpose

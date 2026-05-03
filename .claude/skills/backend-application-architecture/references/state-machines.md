@@ -1,3 +1,11 @@
+---
+purpose: State machine design — states, transitions, guards, side effects, persistence, and concurrency
+load-when: Entity has meaningful lifecycle with explicit transition rules and auditability requirements
+tier: domain
+see-also:
+  - transaction-boundaries.md
+---
+
 # State Machines
 
 ## Purpose

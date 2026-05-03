@@ -1,3 +1,11 @@
+---
+purpose: Transaction boundary principles, atomicity review, side effect ordering, and retry behavior
+load-when: Reviewing or designing transaction boundaries, atomicity, or post-commit side effects
+tier: domain
+see-also:
+  - workflow-orchestration.md
+---
+
 # Transaction Boundaries
 
 ## Purpose

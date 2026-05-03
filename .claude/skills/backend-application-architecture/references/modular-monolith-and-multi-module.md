@@ -1,3 +1,11 @@
+---
+purpose: Module boundary design for modular monoliths — ownership, public APIs, and cycle prevention
+load-when: Reviewing module boundaries, ownership, or dependency cycles
+tier: domain
+see-also:
+  - dependency-architecture.md
+---
+
 # Modular Monolith and Multi-Module Backend
 
 ## Purpose
