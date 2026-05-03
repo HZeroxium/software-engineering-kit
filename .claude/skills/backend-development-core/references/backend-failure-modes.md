@@ -1,3 +1,10 @@
+---
+purpose: Categorized backend failure modes across all 9 scopes for risk triage and failure-mode identification
+load-when: Identifying specific failure risks for a selected backend scope during task triage
+tier: scenario
+see-also: []
+---
+
 # Backend Failure Modes
 
 ## Purpose

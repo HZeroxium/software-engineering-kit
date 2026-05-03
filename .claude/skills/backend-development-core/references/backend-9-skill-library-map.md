@@ -1,3 +1,12 @@
+---
+purpose: Maps broad backend requests to the 9 specialized backend Skills with use cases, inputs, and expected outputs per scope
+load-when: Routing a backend task to a specialized Skill — load before or during scope selection
+tier: foundational
+see-also:
+  - backend-15-scope-model.md
+  - backend-cross-cutting-concerns.md
+---
+
 # Backend 9-Skill Library Map
 
 ## Purpose

@@ -39,6 +39,12 @@ Do not:
 - Invent APIs, commands, framework behavior, internal library behavior, or organization-specific conventions.
 - Recommend broad rewrites before classifying scope and risk.
 
+## Required Inputs
+
+- Backend request or task description (required).
+- Repository context such as module structure, existing API contracts, domain model, or technology stack (optional; request when task risk is High or Critical).
+- Technology constraints confirmed from the repo (optional; do not assume framework, cloud provider, or internal library behavior).
+
 ## Compressed Backend Scope Model
 
 Use this 9-scope model for active routing:
@@ -109,7 +115,9 @@ For deeper analysis, use `references/backend-15-scope-model.md`.
 7. Recommend the next specialized Skill or next safe action.
 8. Produce a handoff prompt if another Skill should continue.
 
-## Expected Output
+## Expected Outputs
+
+Output type: **mixed** (classification + analysis + recommendation + handoff prompt)
 
 Return:
 
@@ -162,35 +170,27 @@ Before recommending implementation, check for:
 
 ## Final Response Shape
 
-Use this structure unless the user requests a different format:
+Use `templates/backend-task-classification.md` for output format.
 
-```text
-# Backend Task Classification
+## Supporting Files
 
-## Summary
-...
-
-## Task Type
-...
-
-## Primary Scope
-...
-
-## Secondary Scopes
-...
-
-## Recommended Specialized Skill
-...
-
-## Risks and Assumptions
-...
-
-## Context Needed
-...
-
-## Suggested Next Action
-...
-
-## Handoff Prompt
-...
-```
+| File | Purpose | Load when |
+|------|---------|-----------|
+| `references/reference-index.md` | Navigation map for all reference files with tiers and load conditions | Load first to navigate the reference graph without loading all files |
+| `references/framework-agnostic-backend-principles.md` | Core principles for framework-agnostic analysis | Any broad backend task |
+| `references/backend-9-skill-library-map.md` | Deep routing map with inputs and outputs per scope | Primary scope selection |
+| `references/backend-15-scope-model.md` | Full 15-scope taxonomy for deep analysis | When 9-scope routing is insufficient |
+| `references/backend-cross-cutting-concerns.md` | Cross-cutting concerns across all scopes | When multiple scopes overlap |
+| `references/backend-failure-modes.md` | Failure modes per scope for risk triage | When identifying specific failure risks |
+| `references/backend-quality-attributes.md` | Quality attribute trade-off analysis | When evaluating backend designs |
+| `checklists/backend-task-triage-checklist.md` | Task understanding and scope selection checklist | Starting any backend task |
+| `checklists/backend-skill-selection-checklist.md` | Decision checklist for selecting the right specialized Skill | After primary scope is identified |
+| `checklists/backend-risk-triage-checklist.md` | Risk triage checklist across all backend risk categories | When risk level is Medium or above |
+| `templates/backend-task-classification.md` | Output format for backend task classification | Producing the classification output |
+| `templates/backend-scope-selection.md` | Output format for scope selection reasoning | When scope is contested or multi-scope |
+| `templates/backend-analysis-summary.md` | Output format for backend analysis summary | When a concise analysis summary is needed |
+| `templates/backend-risk-register.md` | Output format for the risk register | When risk level is High or Critical |
+| `templates/backend-skill-handoff.md` | Handoff prompt to the selected specialized Skill | Always — at end of routing workflow |
+| `examples/backend-task-classification-example.md` | Worked example: payment order (integration scope) | Validating output format and routing |
+| `examples/backend-api-design-routing-example.md` | Worked example: subscription plan update (domain/API scope) | Validating routing for domain/API tasks |
+| `examples/backend-security-triage-example.md` | Worked example: admin profile API (security scope, Critical risk) | Validating routing for security-sensitive tasks |

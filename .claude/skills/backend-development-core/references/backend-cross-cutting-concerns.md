@@ -1,3 +1,11 @@
+---
+purpose: 9 cross-cutting backend concerns (error handling, idempotency, configuration, multi-tenancy, cost, governance, observability, privacy, testing) that apply across all scopes
+load-when: Task triage reveals multiple overlapping scopes or cross-cutting risk signals are present
+tier: domain
+see-also:
+  - backend-failure-modes.md
+---
+
 # Backend Cross-Cutting Concerns
 
 ## Purpose

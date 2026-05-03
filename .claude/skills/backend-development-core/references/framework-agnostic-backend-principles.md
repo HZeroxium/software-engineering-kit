@@ -1,3 +1,10 @@
+---
+purpose: 12 framework-agnostic backend principles for analyzing systems without assuming a specific framework, vendor, or cloud
+load-when: Starting any broad backend task where framework and platform assumptions must be avoided
+tier: foundational
+see-also: []
+---
+
 # Framework-Agnostic Backend Principles
 
 ## Purpose

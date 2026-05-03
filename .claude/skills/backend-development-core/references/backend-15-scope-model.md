@@ -1,3 +1,12 @@
+---
+purpose: Full 15-scope technology-neutral backend taxonomy with definitions, key concerns, typical questions, failure modes, and AI guidance per scope
+load-when: 9-scope routing is insufficient or deeper scope analysis is needed for a specific area
+tier: domain
+see-also:
+  - backend-failure-modes.md
+  - backend-cross-cutting-concerns.md
+---
+
 # Backend 15-Scope Model
 
 ## Purpose

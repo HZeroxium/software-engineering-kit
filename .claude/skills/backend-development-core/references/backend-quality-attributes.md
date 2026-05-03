@@ -1,3 +1,10 @@
+---
+purpose: 17 quality attributes for evaluating backend designs beyond correctness; includes trade-off table and validation evidence examples
+load-when: Evaluating a backend design, identifying trade-offs, or defining the quality bar for a task
+tier: domain
+see-also: []
+---
+
 # Backend Quality Attributes
 
 ## Purpose
