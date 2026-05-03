@@ -1,3 +1,11 @@
+---
+purpose: Principles and rules for keeping backend changes small, focused, and independently reviewable
+load-when: Planning or reviewing edit scope; deciding whether to split a change; noticing the planned change is growing large
+tier: domain
+see-also:
+  - backend-implementation-workflow.md
+---
+
 # Minimal Reviewable Diffs
 
 ## Principle

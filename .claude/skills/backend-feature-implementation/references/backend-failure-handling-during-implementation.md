@@ -1,3 +1,11 @@
+---
+purpose: Failure type classification and structured failure report pattern for implementation-time failures
+load-when: A check, test, or build has failed during implementation and a root cause analysis or escalation decision is needed
+tier: domain
+see-also:
+  - backend-implementation-workflow.md
+---
+
 # Backend Failure Handling During Implementation
 
 ## Principle

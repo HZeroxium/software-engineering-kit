@@ -1,3 +1,11 @@
+---
+purpose: Decision rules for test-first vs implement-then-test; test type selection by change type; test quality criteria
+load-when: Deciding when to write tests before vs after implementation; selecting the right test type for a change
+tier: domain
+see-also:
+  - backend-implementation-workflow.md
+---
+
 # Test-First or Test-Aware Implementation
 
 ## Principle

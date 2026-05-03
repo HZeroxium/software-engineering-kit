@@ -1,3 +1,10 @@
+---
+purpose: Decision criteria for when to update documentation during implementation; docs to consider; what to avoid
+load-when: Implementation changes a public API contract, error model, config requirements, operational behavior, or developer workflow
+tier: scenario
+see-also: []
+---
+
 # Backend Documentation Update During Implementation
 
 ## Principle

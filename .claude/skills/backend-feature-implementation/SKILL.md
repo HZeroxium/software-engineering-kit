@@ -31,6 +31,27 @@ Use when implementation affects:
 - Tests and validation.
 - Backend refactoring.
 
+## Required Inputs
+
+Use available context first. Ask for missing context only when it materially affects implementation safety or scope.
+
+**Required:**
+- User request or task description.
+
+**Strongly recommended:**
+- Design output from `backend-feature-design` (if design was performed).
+- Relevant source files and test files.
+- Build files or package manager files.
+
+**Useful when available:**
+- Acceptance criteria or issue description.
+- Current diffs or recent changes.
+- Logs, CI output, or stack traces.
+- Config files or schema files.
+- Internal library conventions confirmed from the repo.
+- Validation commands discovered from README, CI, or build files.
+- Risk tolerance and deployment constraints.
+
 ## Non-Goals
 
 Do not:
@@ -93,15 +114,16 @@ Ask for confirmation before:
 - Do not claim conventions unless seen in code/config/tests.
 - Do not invent validation commands.
 
-## Expected Output
+## Expected Outputs
 
-Use these templates when useful:
+Output type: **mixed** — this Skill produces different output types across phases:
 
-- `templates/backend-implementation-plan.md`
-- `templates/backend-task-breakdown.md`
-- `templates/backend-implementation-summary.md`
-- `templates/backend-validation-report.md`
-- `templates/backend-exit-criteria.md`
+- **plan** — explore and plan phases: exploration summary, affected files, strategy, test plan, validation commands, risk gates. Use `templates/backend-implementation-plan.md` or `templates/backend-task-breakdown.md`.
+- **summary** — summarize phase: files changed, behavior changed, tests added, validation run, failures, residual risks, follow-ups. Use `templates/backend-implementation-summary.md`.
+- **report** — when validation is detailed enough to stand alone. Use `templates/backend-validation-report.md`.
+- **checklist** — when evaluating readiness before editing or before summarizing. Use `templates/backend-exit-criteria.md`.
+
+For simple low-risk tasks, compress plan and summary into a single response while preserving validation and risk reporting.
 
 ## Final Response Shape
 
@@ -132,3 +154,25 @@ Use these templates when useful:
 ## Next Recommended Step
 ...
 ```
+
+## Supporting files
+
+Load only when useful. Start with `references/reference-index.md` when the task is broad or multiple references may apply.
+
+| File | Purpose | Load when |
+| --- | --- | --- |
+| `references/reference-index.md` | Semantic navigation graph for all references, checklists, templates, and examples | Starting a broad task or unsure which reference to load first |
+| `references/backend-implementation-workflow.md` | Phase workflow with entry/exit criteria, decision heuristics, and common pitfalls | Starting any backend implementation task |
+| `references/test-first-or-test-aware-implementation.md` | Test sequencing rules; test type selection matrix | Deciding when to write tests first; selecting the right test type for a change |
+| `references/minimal-reviewable-diffs.md` | Diff scope discipline and split-change criteria | Planning edit scope; noticing the planned change is growing large |
+| `references/backend-failure-handling-during-implementation.md` | Failure classification and structured failure report | A check, build, or test has failed during implementation |
+| `references/backend-doc-update-during-implementation.md` | Doc update decision criteria | Implementation changes a public contract, error model, config, or operational behavior |
+| `templates/backend-implementation-plan.md` | Implementation plan template | Producing a structured implementation plan |
+| `templates/backend-task-breakdown.md` | Task breakdown template | Splitting work into parallel or sequential tasks |
+| `templates/backend-implementation-summary.md` | Implementation summary template | Producing the final summary |
+| `templates/backend-validation-report.md` | Validation report template | Producing a standalone validation report |
+| `templates/backend-exit-criteria.md` | Exit criteria checklist | Evaluating implementation readiness |
+| `checklists/before-backend-edit-checklist.md` | Pre-edit gate checklist | Before making any backend edit |
+| `checklists/backend-risk-gate-checklist.md` | Risk gate checklist | During planning when risky areas may be touched |
+| `checklists/backend-implementation-done-checklist.md` | Post-implementation completeness check | Before producing the final summary |
+| `examples/java-backend-implementation-plan-example.md` | Filled-in plan example | Calibrating plan depth or format |
