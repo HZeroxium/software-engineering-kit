@@ -5,6 +5,8 @@
 - [ ] Dependencies mapped.
 - [ ] Timeouts defined.
 - [ ] Retry safety checked.
+- [ ] Idempotency verified for retried operations.
+- [ ] Deadline propagated across call chain.
 - [ ] Fallback/degradation defined.
 - [ ] Circuit breaker need considered.
 - [ ] Bulkhead/resource isolation considered.

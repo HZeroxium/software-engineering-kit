@@ -1,3 +1,10 @@
+---
+purpose: Illustrative Java code sketches for dependency policy record and fallback shape — for reference only, not copy-paste
+load-when: Java code examples explicitly requested for reliability or fallback patterns
+tier: scenario
+see-also: []
+---
+
 # Java Reliability Examples
 
 Examples are illustrative only. Follow repository conventions.

@@ -1,3 +1,10 @@
+---
+purpose: SLI definition criteria, SLO target-setting, error budget calculation, and burn-rate alerting principles
+load-when: SLO/SLI definition, error budget analysis, or burn-rate alerting is in scope
+tier: domain
+see-also: []
+---
+
 # SLO, SLI, and Error Budget
 
 ## SLI

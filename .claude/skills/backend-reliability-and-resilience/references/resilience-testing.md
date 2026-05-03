@@ -1,3 +1,10 @@
+---
+purpose: Test types for verifying failure behavior (timeout, retry, circuit breaker, bulkhead, failover, duplicate delivery); safety constraints for destructive tests
+load-when: Designing or reviewing resilience tests, chaos tests, or failure injection scenarios
+tier: domain
+see-also: []
+---
+
 # Resilience Testing
 
 ## Purpose

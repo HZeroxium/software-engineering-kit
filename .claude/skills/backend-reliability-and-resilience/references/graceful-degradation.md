@@ -1,3 +1,10 @@
+---
+purpose: Degradation strategies (cache, queue, disable, partial response, fallback provider) and design questions for partial-availability scenarios
+load-when: Designing or reviewing fallback, partial availability, or graceful degradation behavior
+tier: domain
+see-also: []
+---
+
 # Graceful Degradation
 
 ## Purpose

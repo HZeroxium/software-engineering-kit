@@ -1,3 +1,14 @@
+---
+purpose: Core definitions for reliability, availability, resilience, durability, and recoverability; foundational failure mode vocabulary
+load-when: Starting any reliability or resilience task — load this first for shared vocabulary
+tier: foundational
+see-also:
+  - timeout-retry-circuit-breaker-bulkhead.md
+  - slo-sli-error-budget.md
+  - graceful-degradation.md
+  - resilience-testing.md
+---
+
 # Reliability, Availability, and Resilience
 
 ## Definitions

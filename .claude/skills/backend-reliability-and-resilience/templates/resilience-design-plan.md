@@ -16,13 +16,14 @@
 
 | Control         | Design        | Validation      |
 | --------------- | ------------- | --------------- |
-| Timeout         | `<policy>`    | `<test>`        |
-| Retry           | `<policy>`    | `<test>`        |
-| Circuit breaker | `<policy>`    | `<test>`        |
-| Bulkhead        | `<isolation>` | `<test>`        |
-| Backpressure    | `<policy>`    | `<test>`        |
-| Fallback        | `<behavior>`  | `<test>`        |
-| Reconciliation  | `<process>`   | `<test/manual>` |
+| Timeout              | `<policy>`                                          | `<test>`        |
+| Retry                | `<policy: max attempts, backoff base, jitter strategy>` | `<test>`    |
+| Circuit breaker      | `<policy>`                                          | `<test>`        |
+| Bulkhead             | `<isolation>`                                       | `<test>`        |
+| Backpressure         | `<policy>`                                          | `<test>`        |
+| Deadline propagation | `<entry point, header/context, abort condition>`    | `<test>`        |
+| Fallback             | `<behavior>`                                        | `<test>`        |
+| Reconciliation       | `<process>`                                         | `<test/manual>` |
 
 ## Degraded Mode
 
