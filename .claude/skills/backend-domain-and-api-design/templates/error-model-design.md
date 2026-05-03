@@ -32,8 +32,6 @@
 <error response / RPC status / event failure format>
 ```
 
-```
-
 ## Error Mapping
 
 | Condition     | Error Code | Status Mapping | Retryable? | Log Level | Client Action |

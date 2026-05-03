@@ -20,8 +20,6 @@
 source -> validation -> processing -> storage -> logs/events/metrics -> external systems -> response
 ```
 
-```
-
 ## Sources and Sinks
 
 | Location          | Data Present? | Protection     | Risk     |
@@ -45,4 +43,3 @@ source -> validation -> processing -> storage -> logs/events/metrics -> external
 - `<response field test>`
 - `<event payload review>`
 - `<external provider data review>`
-```

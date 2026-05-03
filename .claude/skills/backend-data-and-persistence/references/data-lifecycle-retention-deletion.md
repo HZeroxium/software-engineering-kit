@@ -1,3 +1,10 @@
+---
+purpose: Data lifecycle from creation to deletion — retention policy, privacy questions, soft delete risks, cascade deletion
+load-when: Reviewing retention policy, deletion behavior, privacy compliance, or data lifecycle
+tier: domain
+see-also: []
+---
+
 # Data Lifecycle, Retention, and Deletion
 
 ## Purpose

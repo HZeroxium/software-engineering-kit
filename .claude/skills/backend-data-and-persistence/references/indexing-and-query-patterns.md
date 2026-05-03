@@ -1,3 +1,10 @@
+---
+purpose: Query review checklist, index design questions, performance smells — missing tenant filter, N+1, deep pagination
+load-when: Reviewing or designing queries, indexes, or query performance
+tier: domain
+see-also: []
+---
+
 # Indexing and Query Patterns
 
 ## Purpose

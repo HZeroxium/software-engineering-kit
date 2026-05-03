@@ -1,3 +1,12 @@
+---
+purpose: Ownership vocabulary — who can write, read, and share data; source of truth; cross-service access patterns
+load-when: Identifying data owner, shared access contract, or writer/reader boundaries
+tier: foundational
+see-also:
+  - multi-tenancy-data-isolation.md
+  - data-lifecycle-retention-deletion.md
+---
+
 # Data Ownership
 
 ## Purpose

@@ -1,3 +1,10 @@
+---
+purpose: Idempotency and retry safety — when to apply, key design, storage patterns, failure modes
+load-when: Idempotency design, retry safety, or at-least-once delivery analysis
+tier: domain
+see-also: []
+---
+
 # Idempotency and Retry Safety
 
 ## Purpose

@@ -1,3 +1,10 @@
+---
+purpose: Pagination, filtering, and sorting design — styles, filter constraints, sort safety, review smells
+load-when: List API pagination, filtering, or sorting design or review
+tier: domain
+see-also: []
+---
+
 # Pagination, Filtering, and Sorting
 
 ## Purpose

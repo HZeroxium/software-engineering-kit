@@ -1,3 +1,11 @@
+---
+purpose: API/interface style selection — REST-like, RPC, GraphQL, event, command message, webhook, internal interface trade-offs
+load-when: Comparing or selecting an API/interface style
+tier: domain
+see-also:
+  - api-contracts-versioning-and-compatibility.md
+---
+
 # API Style Selection
 
 ## Purpose

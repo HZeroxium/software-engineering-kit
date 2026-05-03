@@ -1,3 +1,16 @@
+---
+purpose: OWASP API Security top-10 risk taxonomy and backend review questions
+load-when: Starting any backend security review — load first for risk vocabulary and mapping
+tier: foundational
+see-also:
+  - authorization-models.md
+  - authentication-and-service-identity.md
+  - input-output-security.md
+  - secrets-management.md
+  - abuse-prevention.md
+  - audit-logging.md
+---
+
 # OWASP API Security Risk Map
 
 ## Purpose

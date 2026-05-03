@@ -1,3 +1,11 @@
+---
+purpose: Input injection risks and output exposure risks with review questions and validation
+load-when: Task involves input validation, injection risk, or API response exposure review
+tier: domain
+see-also:
+  - external-call-security.md
+---
+
 # Input and Output Security
 
 ## Input Risks

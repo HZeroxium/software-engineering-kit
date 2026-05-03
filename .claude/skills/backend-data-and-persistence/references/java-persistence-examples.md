@@ -1,3 +1,10 @@
+---
+purpose: Java code snippets illustrating repository port design, tenant-safe query shape, and idempotency constraint
+load-when: Java code examples for persistence patterns explicitly requested
+tier: scenario
+see-also: []
+---
+
 # Java Persistence Examples
 
 Examples are illustrative only. Follow repository conventions.

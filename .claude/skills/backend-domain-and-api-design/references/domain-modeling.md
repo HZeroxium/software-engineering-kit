@@ -1,3 +1,12 @@
+---
+purpose: Core domain modeling vocabulary — entity, value object, aggregate, domain service, domain event, invariant, command, query
+load-when: Domain modeling, entity/value object/aggregate design, or core domain vocabulary needed
+tier: foundational
+see-also:
+  - bounded-contexts-and-business-capabilities.md
+  - business-invariants-and-state-transitions.md
+---
+
 # Domain Modeling
 
 ## Purpose
@@ -34,16 +43,6 @@ Model backend behavior around business concepts rather than framework classes, e
 - Missing invariants or state transition rules.
 - Domain objects depending on infrastructure APIs.
 
-## Java-Oriented Guidance
+## Java Examples
 
-Use Java examples only illustratively:
-
-```java
-record Money(String currency, long minorUnits) {}
-
-enum OrderStatus {
-    DRAFT, SUBMITTED, PAID, CANCELLED
-}
-```
-
-Prefer repository conventions over new abstractions.
+See `java-domain-modeling-examples.md` when Java code examples are explicitly requested.

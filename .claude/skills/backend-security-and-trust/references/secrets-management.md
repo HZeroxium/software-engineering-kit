@@ -1,3 +1,10 @@
+---
+purpose: Secrets handling rules, review questions, and common smells
+load-when: Task involves credentials, API keys, tokens, certificates, or sensitive config
+tier: domain
+see-also: []
+---
+
 # Secrets Management
 
 ## Purpose

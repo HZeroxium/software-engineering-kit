@@ -1,3 +1,10 @@
+---
+purpose: Bounded context and business capability concepts — context boundaries, ownership, shared language, failure modes
+load-when: Bounded context design, capability ownership review, or model language ambiguity
+tier: foundational
+see-also: []
+---
+
 # Bounded Contexts and Business Capabilities
 
 ## Purpose

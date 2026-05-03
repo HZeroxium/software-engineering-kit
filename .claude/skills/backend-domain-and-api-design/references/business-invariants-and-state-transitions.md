@@ -1,3 +1,11 @@
+---
+purpose: Business invariants and state transition model — guard conditions, valid/invalid transitions, correctness smells
+load-when: Business invariants, state transition design, or correctness review
+tier: foundational
+see-also:
+  - api-style-selection.md
+---
+
 # Business Invariants and State Transitions
 
 ## Purpose

@@ -1,3 +1,12 @@
+---
+purpose: Relational and NoSQL schema vocabulary — constraints, normalization, aggregate shape, partition keys, schema evolution
+load-when: Designing or reviewing a storage structure, entity model, or data model
+tier: foundational
+see-also:
+  - indexing-and-query-patterns.md
+  - migration-strategy.md
+---
+
 # Schema Design
 
 ## Purpose

@@ -1,3 +1,11 @@
+---
+purpose: Caching patterns, invalidation strategies, TTL, stampede protection, distributed vs local cache trade-offs
+load-when: Designing or reviewing cache behavior, invalidation logic, or cache correctness
+tier: domain
+see-also:
+  - multi-tenancy-data-isolation.md
+---
+
 # Caching Strategies
 
 ## Purpose

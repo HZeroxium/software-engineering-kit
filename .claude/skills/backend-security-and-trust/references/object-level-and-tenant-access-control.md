@@ -1,3 +1,10 @@
+---
+purpose: Object ownership verification and tenant isolation required checks
+load-when: Task involves resource ownership, tenant isolation, or multi-tenant data access
+tier: domain
+see-also: []
+---
+
 # Object-Level and Tenant Access Control
 
 ## Purpose

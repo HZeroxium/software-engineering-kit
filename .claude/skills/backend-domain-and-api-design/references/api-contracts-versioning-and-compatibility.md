@@ -1,3 +1,12 @@
+---
+purpose: API contract stability — backward-compatible vs breaking changes, versioning strategy, contract elements, validation
+load-when: API contract review, versioning analysis, or compatibility assessment
+tier: domain
+see-also:
+  - error-models.md
+  - idempotency-and-retry-safety.md
+---
+
 # API Contracts, Versioning, and Compatibility
 
 ## Purpose

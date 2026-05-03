@@ -1,3 +1,10 @@
+---
+purpose: Expand-contract migration pattern, high-risk change classification, backfill safety, production validation steps
+load-when: Planning or reviewing a schema migration, backfill, or destructive change
+tier: domain
+see-also: []
+---
+
 # Migration Strategy
 
 ## Purpose

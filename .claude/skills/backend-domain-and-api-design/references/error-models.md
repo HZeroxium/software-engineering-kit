@@ -1,3 +1,10 @@
+---
+purpose: Error model design — error dimensions, design principles, common categories, review smells
+load-when: Designing or reviewing error model semantics for an API or operation
+tier: domain
+see-also: []
+---
+
 # Error Models
 
 ## Purpose

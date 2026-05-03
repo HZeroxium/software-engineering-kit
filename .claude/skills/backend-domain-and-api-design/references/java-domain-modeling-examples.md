@@ -1,3 +1,10 @@
+---
+purpose: Java code sketches — value object, state transition enum, domain entity — illustrative only
+load-when: Java code examples explicitly requested
+tier: scenario
+see-also: []
+---
+
 # Java Domain Modeling Examples
 
 These examples are illustrative only. Follow repository conventions and internal libraries when available.

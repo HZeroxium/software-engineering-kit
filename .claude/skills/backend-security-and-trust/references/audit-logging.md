@@ -1,3 +1,10 @@
+---
+purpose: Audit event design, required fields, and what to avoid in audit logs
+load-when: Task involves security-relevant logging, accountability requirements, or compliance auditing
+tier: domain
+see-also: []
+---
+
 # Audit Logging
 
 ## Purpose

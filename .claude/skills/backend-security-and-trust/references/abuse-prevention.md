@@ -1,3 +1,10 @@
+---
+purpose: Abuse controls — rate limiting, quotas, replay protection, and cost bounding
+load-when: Abuse risk detected — public APIs, expensive operations, AI/provider calls, or replay-vulnerable flows
+tier: scenario
+see-also: []
+---
+
 # Abuse Prevention
 
 ## Purpose

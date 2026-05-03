@@ -26,8 +26,6 @@
 <caller> -> <boundary> -> <backend> -> <data/external systems>
 ```
 
-```
-
 ## Threats
 
 | Threat     | Impact     | Mitigation     |
@@ -45,4 +43,3 @@
 ## Security Validation
 
 - `<test/review/scanner/manual approval>`
-```

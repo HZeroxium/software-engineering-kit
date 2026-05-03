@@ -1,3 +1,10 @@
+---
+purpose: Tenant isolation models, missing predicate failure modes, background job tenant awareness, cache key isolation
+load-when: Reviewing multi-tenant data access, tenant-scoped queries, or isolation design
+tier: domain
+see-also: []
+---
+
 # Multi-Tenancy Data Isolation
 
 ## Purpose
